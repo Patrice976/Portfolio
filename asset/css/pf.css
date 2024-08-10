@@ -1,0 +1,275 @@
+* {
+    margin : 0;
+    padding : 0 ; 
+}
+
+.txt {
+    font-size: 2em;
+    font-family: "Zain", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 { 
+    font-family: "Aloja-Light";
+    
+}
+
+section {
+    height: 100vh ;
+    width: 100%;
+}
+
+.headery {
+    z-index: 20;
+    display: inline-block ; 
+    padding: 1.4em ;
+    position : fixed ;
+    width : 100% ;
+    background : linear-gradient(var(--main-color),var(--darkest-color)) ;
+    height : 2.4em;
+}
+
+.headerb {
+    z-index: 20;
+    display: inline-block ; 
+    padding: 1.4em ;
+    position : fixed ;
+    width : 100% ;
+    background : linear-gradient(#324873,#0D0D0D);
+    height : 2.4em;
+}
+
+.headery a {
+    margin : 3em ;
+    color: var(--lightest-color);
+    font-family: "Zain", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+    font-size: 1.7em;
+    text-decoration: none;
+}
+
+.headerb a {
+    margin : 3em ;
+    padding-top: 3em; 
+    color:#9973BF;
+    font-family: "Zain", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.7em;
+    text-decoration: none;
+}
+
+.yellowTheme { 
+    background: linear-gradient(var(--lightest-color),var(--secondary-light-color),var(--main-color));
+    color:var(--secondary-dark-color); 
+    
+}
+
+.blueTheme {
+
+    background : linear-gradient(#9973BF,#1E2640,#324873) ; 
+    color : var(--police-color) ; 
+
+}
+
+.landing_container{
+    display:flex ;
+    overflow-x: hidden ;
+    margin-left: 8%; 
+}
+
+.txt_container {
+    overflow: visible;
+    margin-left : 1em;
+    margin-top: 5em ;
+    font-family: 'Aloja-Light'; 
+    font-optical-sizing: auto;
+}
+
+.img_container{
+    margin-top : 5em ;
+}
+
+h1 {
+    font-size: 10em;
+    font-family: 'Aloja-Light';
+    padding : 0
+}
+
+.div1 h2 {
+    margin-left : 10em ; 
+    margin-bottom : 2em ; 
+    font-size : 1e.5m ;
+    overflow : visible ;
+    white-space: nowrap;
+}
+
+.div2 h2 {
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+}
+
+#me {
+    height: 40%;
+    width: auto; 
+    margin-top : 4em ;
+    margin-left: 10em;
+    border-radius: 30% ;  
+    box-shadow : var(--darkest-color) -5em 4em 3em 0px;
+    transition : opacity 0.4s ease-in-out ;
+}
+
+.div2 { 
+    padding-bottom: 15em ;
+}
+.contenu_a_propos {
+    margin-top : 10em ;
+    line-height: 4em;
+    margin-left: 2em;
+    margin-right: 1em;
+}
+.activities { 
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+    flex-wrap: nowrap;
+
+}
+.passions {
+    display : flex ; 
+    flex-direction: column;
+    align-items : center ;
+    justify-content: center;
+    text-align: center;
+    margin : 2em ; 
+    flex-wrap: nowrap;
+    width: 25vh;
+    
+    
+    
+}
+
+
+.passions img{
+    height: 250px ;
+    width: 250px ;
+    border-radius: 50%;
+    object-fit:cover;
+    transition: opacity 0.6s ease transform  0.6s ;
+    padding : 1em
+    
+   
+   
+}
+
+.txt_under_img {
+    text-align: center;
+    white-space : nowrap ;   
+}
+
+.ltxt {
+    font-size: 1.3em ;
+    font-family: 'Zain';
+}
+
+.txt_above_img h2 {
+    font-size: 2.3em;
+    text-align: center;
+    bottom : 100% ; 
+    margin-left : 40% ;
+    color : var(--police-color)
+    
+}
+
+.button_list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10em;
+}
+
+button {
+    font-family: "Aloja-Light";
+}
+
+
+.button_list button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--lightest-color);
+    font-size: 18px;
+    border-radius: 20px;
+    width: 25em;
+    height: 5em;
+
+    transition: 0.3s;
+    background: linear-gradient(var(--main-color),var(--darkest-color));
+    margin-bottom : 2em
+  }
+  
+  .button_list button:hover {
+    border-bottom-width: 0;
+    animation : 1.3s ease-in-out  infinite alternate pickme 
+    
+  }
+
+  @keyframes pickme {
+    from { transform : translateY(-10px)}
+    to {transform : translateY(10px)}
+  }
+
+  
+
+
+
+
+
+
+
+/* Color Theme Swatches in Hex */
+.Midas-Touch-1-hex { color: #f2bf5e; }
+.Midas-Touch-2-hex { color: #D97F11; }
+.Midas-Touch-3-hex { color: #8C4303; }
+.Midas-Touch-4-hex { color: #40261D; }
+.Midas-Touch-5-hex { color: #0D0D0D; }
+
+/* Color Theme Swatches in RGBA */
+.Midas-Touch-1-rgba { color: rgba(242, 190, 94, 1); }
+.Midas-Touch-2-rgba { color: rgba(216, 127, 17, 1); }
+.Midas-Touch-3-rgba { color: rgba(140, 66, 2, 1); }
+.Midas-Touch-4-rgba { color: rgba(63, 38, 28, 1); }
+.Midas-Touch-5-rgba { color: rgba(12, 12, 12, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Midas-Touch-1-hsla { color: hsla(39, 85, 66, 1); }
+.Midas-Touch-2-hsla { color: hsla(33, 85, 45, 1); }
+.Midas-Touch-3-hsla { color: hsla(28, 96, 28, 1); }
+.Midas-Touch-4-hsla { color: hsla(16, 37, 18, 1); }
+.Midas-Touch-5-hsla { color: hsla(0, 0, 5, 1); }
+
+/* Color Theme Swatches in Hex */
+.Nuit-étoilée--1-hex { color: #9973BF; }
+.Nuit-étoilée--2-hex { color: #1E2640; }
+.Nuit-étoilée--3-hex { color: #324873; }
+.Nuit-étoilée--4-hex { color: #111826; }
+.Nuit-étoilée--5-hex { color: #0D0D0D; }
+
+/* Color Theme Swatches in RGBA */
+.Nuit-étoilée--1-rgba { color: rgba(153, 114, 191, 1); }
+.Nuit-étoilée--2-rgba { color: rgba(29, 38, 63, 1); }
+.Nuit-étoilée--3-rgba { color: rgba(50, 71, 114, 1); }
+.Nuit-étoilée--4-rgba { color: rgba(16, 23, 38, 1); }
+.Nuit-étoilée--5-rgba { color: rgba(12, 12, 12, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Nuit-étoilée--1-hsla { color: hsla(270, 37, 60, 1); }
+.Nuit-étoilée--2-hsla { color: hsla(225, 36, 18, 1); }
+.Nuit-étoilée--3-hsla { color: hsla(219, 38, 32, 1); }
+.Nuit-étoilée--4-hsla { color: hsla(219, 38, 10, 1); }
+.Nuit-étoilée--5-hsla { color: hsla(0, 0, 5, 1); }
+
