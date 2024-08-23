@@ -76,7 +76,7 @@
 
                     <div class="passions" id="musique">
                         <img src="/asset/img/musique.jpeg">
-                        <div class="txt_under_img ltxt"><h2>autodidacte</h2> <br> J'apprend la guitard et le chant <br>et j'essais d'écrire des morceaux    </div>
+                        <div class="txt_under_img ltxt"><h2>"musicien"</h2> <br> J'apprend la guitard et le chant en autodidacte <br>et j'essais d'écrire des morceaux    </div>
                     </div>
 
                     <div class="passions" id="cuisine">
@@ -91,22 +91,41 @@
 
     <section class="div3">
         <div class="button_list"> 
-            <button>Ma stack</button>
-            <button>Mes outils</button>
-            <button>mes soft skills</button>
+            <button id="stack">Ma stack</button>   
+            <button id="outils">Mes outils</button>
+            <button id="skills">mes soft skills</button>
         </div>
-        <div class="display_button">
-            <div class="stack">
-                <img src="">
-                <img src="">
+        <section class="display_button">
+            <div class="ma_stack hide">
+                <div class="stack_img" id="pourlinstant">
+                    <img src="asset\img\logo techno\JavaScript-logo.png" id="img_js" alt="img_js">
+                    <img src="asset\img\logo techno\Python-logo-notext.svg.png" id="img_python" alt="img_python">
+                </div>
+                <div class="stack_txt">
+                    <span id="txt_js" class="hide" >
+                        <h2>Javascript</h2><br><br>
+                        c'est le langage sur lequel je suis le plus à l'aise, j'ai créer tout mes projet avec , je l'utilise essentiellement pour créer de l'animation ou des intéractions pour mon site 
+                    </span>
+                    <span id="txt_python" class="hide" >
+                        <h2>Python</h2><br><br>
+                        C'est un langage que j'ai découvert au lycée, je n'y est pas toucher depuis, j'essais de me réapproprier ce langages au travers divers exercices proposé par ma formation 
+                    </span>
+                </div>
             </div>
         </div>
         
-        <div>
-            <div class="display_mastack"></div>
-            <div class="display_outils"></div>
-            <div class="skills"></div>
-        </div>
+            <div class="mes_outils hide"> 
+                <div class="stack_img">
+                    <img src= "asset\img\logo techno\Figma-logo.svg.png" id="figma_logo" alt="logo figma" >
+                    <img src= "asset\img\logo techno\icone-github-jaune.png" id="github_logo" alt="logo github">
+                    <img src="asset\img\logo techno\logo-logo-git-line-cheat-sheet-signage-cheating-mug-png-clipart-removebg-preview.png" id="git_logo" alt="logo git">
+                    <img src="asset\img\logo techno\Notion-logo.svg.png" id="notion_logo" alt="logo notion">
+                    <img src="asset\img\logo techno\Slack_icon_2019.svg.png" id="slack_logo" alt="logo slack">
+                    <img src="asset\img\logo techno\Visual_Studio_Code_1.35_icon.svg.png" id="vscode_logo" alt="logo visual code studio">
+                </div>
+            </div>
+            <div class="mes_skills hide"> je sais que je ne sais pas grand choses... </div>
+        </section>
 
     </section>
     

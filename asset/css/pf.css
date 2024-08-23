@@ -2,7 +2,9 @@
     margin : 0;
     padding : 0 ; 
 }
-
+body {
+     /* overflow-x : hidden  */
+}
 .txt {
     font-size: 2em;
     font-family: "Zain", sans-serif;
@@ -185,6 +187,85 @@ h1 {
     
 }
 
+.div3 {
+    display : flex ;
+    align-items: center;
+}
+
+.button_list {
+    width: 30dvw;
+    
+}
+
+.display_button {
+    width: 100dvw;
+}
+
+.ma_stack, .mes_outils, .mes_skills {
+    display : flex ;
+    position: relative ;
+    flex-direction : column ; 
+    align-items: center;
+    margin-top : 15% ;
+    /* margin-left : 20% */
+    /* background-color: gold; */
+}
+
+.stack_img {
+    display : flex ; 
+   justify-content: space-evenly;
+   /* background-color: aqua; */
+   width: 100%;
+   
+}
+
+#pourlinstant {
+
+    display : flex ; 
+   justify-content: space-evenly;
+   /* background-color: aqua; */
+   width: 100%;
+
+}
+
+#pourlinstant  img {
+    height: 200px ;
+    max-width: 200px ;
+    padding : 1em ;
+    /* background-color: chartreuse; */
+
+}
+
+/* text commentaire stack */
+#txt_js {
+ z-index: 200;
+}
+
+.stack_txt{ 
+    padding : 2em ;
+    /* margin-left: 120% ; */
+    width : 100dvh ;
+    text-align: center ;
+    font-size: 1.5em;
+    font-family: "Zain", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color : var(--police-color) ;
+    /* background-color: rgb(222, 61, 195); */
+}
+
+.stack_txt h2 {
+    color : var(--police-color)
+}
+
+.div3 .stack_img img {
+    height: 150px ;
+    max-width: 150px ;
+    padding : 1em ;
+    /* background-color: chartreuse; */
+
+}
+
 .button_list {
     display: flex;
     flex-direction: column;
@@ -206,7 +287,6 @@ button {
     border-radius: 20px;
     width: 25em;
     height: 5em;
-
     transition: 0.3s;
     background: linear-gradient(var(--main-color),var(--darkest-color));
     margin-bottom : 2em
@@ -223,53 +303,20 @@ button {
     to {transform : translateY(10px)}
   }
 
-  
+.stack_img img:hover {
+    animation : 0.8s ease-in-out infinite alternate itsme
+}
+
+@keyframes itsme {
+    from { transform: scale(1);}
+    to {transform: scale(1.1);}
+    
+}
 
 
 
+/* Pour cacher les éléments */ 
 
-
-
-
-/* Color Theme Swatches in Hex */
-.Midas-Touch-1-hex { color: #f2bf5e; }
-.Midas-Touch-2-hex { color: #D97F11; }
-.Midas-Touch-3-hex { color: #8C4303; }
-.Midas-Touch-4-hex { color: #40261D; }
-.Midas-Touch-5-hex { color: #0D0D0D; }
-
-/* Color Theme Swatches in RGBA */
-.Midas-Touch-1-rgba { color: rgba(242, 190, 94, 1); }
-.Midas-Touch-2-rgba { color: rgba(216, 127, 17, 1); }
-.Midas-Touch-3-rgba { color: rgba(140, 66, 2, 1); }
-.Midas-Touch-4-rgba { color: rgba(63, 38, 28, 1); }
-.Midas-Touch-5-rgba { color: rgba(12, 12, 12, 1); }
-
-/* Color Theme Swatches in HSLA */
-.Midas-Touch-1-hsla { color: hsla(39, 85, 66, 1); }
-.Midas-Touch-2-hsla { color: hsla(33, 85, 45, 1); }
-.Midas-Touch-3-hsla { color: hsla(28, 96, 28, 1); }
-.Midas-Touch-4-hsla { color: hsla(16, 37, 18, 1); }
-.Midas-Touch-5-hsla { color: hsla(0, 0, 5, 1); }
-
-/* Color Theme Swatches in Hex */
-.Nuit-étoilée--1-hex { color: #9973BF; }
-.Nuit-étoilée--2-hex { color: #1E2640; }
-.Nuit-étoilée--3-hex { color: #324873; }
-.Nuit-étoilée--4-hex { color: #111826; }
-.Nuit-étoilée--5-hex { color: #0D0D0D; }
-
-/* Color Theme Swatches in RGBA */
-.Nuit-étoilée--1-rgba { color: rgba(153, 114, 191, 1); }
-.Nuit-étoilée--2-rgba { color: rgba(29, 38, 63, 1); }
-.Nuit-étoilée--3-rgba { color: rgba(50, 71, 114, 1); }
-.Nuit-étoilée--4-rgba { color: rgba(16, 23, 38, 1); }
-.Nuit-étoilée--5-rgba { color: rgba(12, 12, 12, 1); }
-
-/* Color Theme Swatches in HSLA */
-.Nuit-étoilée--1-hsla { color: hsla(270, 37, 60, 1); }
-.Nuit-étoilée--2-hsla { color: hsla(225, 36, 18, 1); }
-.Nuit-étoilée--3-hsla { color: hsla(219, 38, 32, 1); }
-.Nuit-étoilée--4-hsla { color: hsla(219, 38, 10, 1); }
-.Nuit-étoilée--5-hsla { color: hsla(0, 0, 5, 1); }
-
+.hide {
+    display: none 
+}
