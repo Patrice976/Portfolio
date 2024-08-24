@@ -6,16 +6,7 @@ let header = document.querySelector('header')
 let blue = false
 let passion = document.querySelector('.passions')
 
-//variable troisième section 
-//Objet stack/text 
-const StackToText = {
-    'img_js' : 'txt_js',
-    'img_python' : 'txt_python'
-}
 
-imgSec3= document.querySelector('.stack_img img')
-
-console.log(document)
 // première section : changement de theme au survol de l'image 
 
 imgMe.addEventListener('mouseover', ()=>{
@@ -45,6 +36,8 @@ imgMe.addEventListener('mouseover', ()=>{
         document.documentElement.style.setProperty('--secondary-dark-color', '#40261D');
         blue = false
     }})
+
+
 //troisième section : Quand on appuie sur un des boutons, le contenu de ce dernier s'afficher 
 
 //Créer un objet qui lie mes boutons et mes éléments d'affichage 
@@ -85,7 +78,16 @@ buttonSkills.addEventListener ('click', ()=>{
 
 
 // troisième section : au clique sur l'image de la stack afficher le texte qui lui correspond 
+//variable troisième section 
+//Objet stack/text 
+const StackToText = {
+    'img_js' : 'txt_js',
+    'img_python' : 'txt_python'
+}
 
+imgSec3= document.querySelector('.stack_img img')
+
+console.log(document)
 const ImgToText = {
     'img_js' : 'txt_js',
     'img_python' : 'txt_python'
@@ -106,7 +108,10 @@ for (let index = 0; index < stack_img.length; index++) { //On parcours l'enssemb
 
         let TargetTxt = document.getElementById(txt) // on selectionne l'élément grace à l'id récupérer dans l'objet ImgToText
         console.log(imgID)
-        TargetTxt.classList.remove('hide') // aficher le texte
+        TargetTxt.classList.remove('hide')  // aficher le texte
+        TargetTxt.scrollIntoView({behavior: "smooth", block :"nearest"})
+        
+
 
     })}
 

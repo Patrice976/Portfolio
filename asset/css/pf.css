@@ -3,7 +3,7 @@
     padding : 0 ; 
 }
 body {
-     /* overflow-x : hidden  */
+     overflow-x : hidden 
 }
 .txt {
     font-size: 2em;
@@ -189,12 +189,8 @@ h1 {
 
 .div3 {
     display : flex ;
+    flex-direction: column;
     align-items: center;
-}
-
-.button_list {
-    width: 30dvw;
-    
 }
 
 .display_button {
@@ -206,7 +202,7 @@ h1 {
     position: relative ;
     flex-direction : column ; 
     align-items: center;
-    margin-top : 15% ;
+    margin-top : 5% ;
     /* margin-left : 20% */
     /* background-color: gold; */
 }
@@ -223,7 +219,6 @@ h1 {
 
     display : flex ; 
    justify-content: space-evenly;
-   /* background-color: aqua; */
    width: 100%;
 
 }
@@ -268,8 +263,9 @@ h1 {
 
 .button_list {
     display: flex;
-    flex-direction: column;
     margin-top: 10em;
+    width: 100dvw ;
+    /* background-color: magenta; */
 }
 
 button {
@@ -283,13 +279,14 @@ button {
     justify-content: center;
     text-decoration: none;
     color: var(--lightest-color);
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 20px;
-    width: 25em;
+    width: 18em;
     height: 5em;
+    margin-left : 10% ; 
     transition: 0.3s;
     background: linear-gradient(var(--main-color),var(--darkest-color));
-    margin-bottom : 2em
+    margin-bottom : 3em
   }
   
   .button_list button:hover {
