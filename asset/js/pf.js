@@ -1,46 +1,57 @@
 // variable première section 
 
 let imgMe = document.getElementById('me')
+let mediv = document.querySelector(".img_container")
 let body = document.querySelector('body')
 let header = document.querySelector('header')
-let blue = false
+let red = false
 let passion = document.querySelector('.passions')
 
 
 // première section : changement de theme au survol de l'image 
 
 imgMe.addEventListener('mouseover', ()=>{
-    if(blue === false) { 
+    if(red === false) { 
             imgMe.style.opacity = 0 ;
             setTimeout(()=> {
-                imgMe.src = 'asset/img/artbreeder-director-2024-07-27T19_54_34.427Z.png' ;
+                imgMe.src = 'asset/img/selfr.jpeg' ;
                 imgMe.style.opacity = 1 ;
+                imgMe.style.height = '55%';
+                mediv.style.marginLeft = '15em';
+                
             
             },300)
-        document.documentElement.style.setProperty('--main-color', '#324873');
-        document.documentElement.style.setProperty('--lightest-color', '#9973BF');
-        document.documentElement.style.setProperty('--secondary-light-color', '#1E2640');
-        document.documentElement.style.setProperty('--secondary-dark-color', 'white');
-        blue = true 
+            document.documentElement.style.setProperty('--main-color', '#400101');
+            document.documentElement.style.setProperty('--lightest-color', '#F2A663');
+            document.documentElement.style.setProperty('--secondary-light-color', '#8C1E14');
+            document.documentElement.style.setProperty('--secondary-dark-color', '#261515');
+            document.documentElement.style.setProperty('--darkest-color', '#BF2626');
+            document.documentElement.style.setProperty('--police-color', '#F2ECE4');
+
+        
+        red = true 
     }
     else {
         imgMe.style.opacity = 0 ;
         setTimeout(()=> {
-            imgMe.src = "asset/img/artbreeder-director-2024-07-30T17_33_41.824Z.png"
+            imgMe.src = "asset/img/slefy.jpeg"
             imgMe.style.opacity = 1 ;
+            imgMe.style.height = '65%';
+            mediv.style.marginLeft = '10em';
 
         },300)
         document.documentElement.style.setProperty('--main-color', '#8C4303');
         document.documentElement.style.setProperty('--lightest-color', '#f2bf5e');
         document.documentElement.style.setProperty('--secondary-light-color', '#D97F11');
         document.documentElement.style.setProperty('--secondary-dark-color', '#40261D');
-        blue = false
+        document.documentElement.style.setProperty('--darkest-color', '#0D0D0D');
+
+        red = false
     }})
 
 
 //troisième section : Quand on appuie sur un des boutons, le contenu de ce dernier s'afficher 
 
-//Créer un objet qui lie mes boutons et mes éléments d'affichage 
 
 let buttonMaStack = document.getElementById('stack')
 let displayStack = document.querySelector('.ma_stack')
@@ -77,9 +88,8 @@ buttonSkills.addEventListener ('click', ()=>{
 
 
 
-// troisième section : au clique sur l'image de la stack afficher le texte qui lui correspond 
-//variable troisième section 
-//Objet stack/text 
+// troisième section : au clique sur l'image affiche le texte qui lui correspond 
+
 const StackToText = {
     'img_js' : 'txt_js',
     'img_python' : 'txt_python'
@@ -89,8 +99,20 @@ imgSec3= document.querySelector('.stack_img img')
 
 console.log(document)
 const ImgToText = {
+    //Partie Stack
     'img_js' : 'txt_js',
-    'img_python' : 'txt_python'
+    'img_python' : 'txt_python',
+    //Partie Outils
+    'figma_logo' : 'txt_figma',
+    'github_logo' : 'txt_github',
+    'git_logo' : 'txt_git',
+    'notion_logo' : 'txt_notion',
+    'slack_logo' : 'txt_slack',
+    'vscode_logo' : 'txt_vscode',
+    //Parti SoftSkillz
+    'teamwork_logo' : 'txt_teamwork',
+    'creativity_logo' : 'txt_creativity'
+
 }
 let stack_txt = document.querySelectorAll(".stack_txt span")
 let stack_img = document.querySelectorAll(".stack_img img")

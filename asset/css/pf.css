@@ -1,9 +1,9 @@
 * {
     margin : 0;
-    padding : 0 ; 
+    padding : 0 ;
 }
 body {
-     overflow-x : hidden 
+     overflow-x : hidden
 }
 .txt {
     font-size: 2em;
@@ -12,10 +12,7 @@ body {
     font-style: normal;
 }
 
-h2 { 
-    font-family: "Aloja-Light";
-    
-}
+
 
 section {
     height: 100vh ;
@@ -24,23 +21,17 @@ section {
 
 .headery {
     z-index: 20;
-    display: inline-block ; 
+    display: inline-block ;
     padding: 1.4em ;
     position : fixed ;
     width : 100% ;
     background : linear-gradient(var(--main-color),var(--darkest-color)) ;
     height : 2.4em;
+    box-shadow: 5px 0px 9px 14px var(--main-color);
 }
 
-.headerb {
-    z-index: 20;
-    display: inline-block ; 
-    padding: 1.4em ;
-    position : fixed ;
-    width : 100% ;
-    background : linear-gradient(#324873,#0D0D0D);
-    height : 2.4em;
-}
+
+
 
 .headery a {
     margin : 3em ;
@@ -55,7 +46,7 @@ section {
 
 .headerb a {
     margin : 3em ;
-    padding-top: 3em; 
+    padding-top: 3em;
     color:#9973BF;
     font-family: "Zain", sans-serif;
     font-weight: 400;
@@ -64,46 +55,55 @@ section {
     text-decoration: none;
 }
 
-.yellowTheme { 
+.yellowTheme {
     background: linear-gradient(var(--lightest-color),var(--secondary-light-color),var(--main-color));
-    color:var(--secondary-dark-color); 
-    
+    color:var(--secondary-dark-color);
+
 }
 
 .blueTheme {
 
-    background : linear-gradient(#9973BF,#1E2640,#324873) ; 
-    color : var(--police-color) ; 
+    background : linear-gradient(#9973BF,#1E2640,#324873) ;
+    color : var(--police-color) ;
 
 }
 
 .landing_container{
     display:flex ;
     overflow-x: hidden ;
-    margin-left: 8%; 
+    margin-left: 8%;
 }
 
 .txt_container {
     overflow: visible;
     margin-left : 1em;
     margin-top: 5em ;
-    font-family: 'Aloja-Light'; 
+    font-family: 'Aloja-Light';
     font-optical-sizing: auto;
 }
 
 .img_container{
-    margin-top : 5em ;
+    margin-top : 4em ;
+    margin-left: 10em;
 }
 
 h1 {
-    font-size: 10em;
-    font-family: 'Aloja-Light';
-    padding : 0
+    font-size: 15em;
+    font-weight: normal;
+    font-family: 'foxlight';
+    margin : 5%
 }
 
+h2 {
+    font-family: "foxlight";
+    font-weight: normal;
+
+}
+
+
 .div1 h2 {
-    margin-left : 10em ; 
-    margin-bottom : 2em ; 
+    margin-left : 10em ;
+    margin-bottom : 2em ;
     font-size : 1e.5m ;
     overflow : visible ;
     white-space: nowrap;
@@ -112,20 +112,20 @@ h1 {
 .div2 h2 {
     text-align: center;
     margin-bottom: 0.5em;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 #me {
-    height: 40%;
-    width: auto; 
+    height: 65%;
+    width: auto;
     margin-top : 4em ;
-    margin-left: 10em;
-    border-radius: 30% ;  
-    box-shadow : var(--darkest-color) -5em 4em 3em 0px;
+    margin : 4em ;
+    border-radius: 30% ;
+    box-shadow : var(--darkest-color) 4em 2em 1em 0px;
     transition : opacity 0.4s ease-in-out ;
 }
 
-.div2 { 
+.div2 {
     padding-bottom: 15em ;
 }
 .contenu_a_propos {
@@ -134,7 +134,7 @@ h1 {
     margin-left: 2em;
     margin-right: 1em;
 }
-.activities { 
+.activities {
     display: flex;
     justify-content: space-around;
     align-items: center ;
@@ -142,17 +142,17 @@ h1 {
 
 }
 .passions {
-    display : flex ; 
+    display : flex ;
     flex-direction: column;
     align-items : center ;
     justify-content: center;
     text-align: center;
-    margin : 2em ; 
+    margin : 2em ;
     flex-wrap: nowrap;
     width: 25vh;
-    
-    
-    
+
+
+
 }
 
 
@@ -163,14 +163,14 @@ h1 {
     object-fit:cover;
     transition: opacity 0.6s ease transform  0.6s ;
     padding : 1em
-    
-   
-   
+
+
+
 }
 
 .txt_under_img {
     text-align: center;
-    white-space : nowrap ;   
+    white-space : nowrap ;
 }
 
 .ltxt {
@@ -181,10 +181,10 @@ h1 {
 .txt_above_img h2 {
     font-size: 2.3em;
     text-align: center;
-    bottom : 100% ; 
+    bottom : 100% ;
     margin-left : 40% ;
     color : var(--police-color)
-    
+
 }
 
 .div3 {
@@ -200,24 +200,25 @@ h1 {
 .ma_stack, .mes_outils, .mes_skills {
     display : flex ;
     position: relative ;
-    flex-direction : column ; 
+    flex-direction : column ;
     align-items: center;
     margin-top : 5% ;
+    text-align: center ;
     /* margin-left : 20% */
     /* background-color: gold; */
 }
 
 .stack_img {
-    display : flex ; 
+    display : flex ;
    justify-content: space-evenly;
    /* background-color: aqua; */
    width: 100%;
-   
+
 }
 
 #pourlinstant {
 
-    display : flex ; 
+    display : flex ;
    justify-content: space-evenly;
    width: 100%;
 
@@ -236,7 +237,7 @@ h1 {
  z-index: 200;
 }
 
-.stack_txt{ 
+.stack_txt{
     padding : 2em ;
     /* margin-left: 120% ; */
     width : 100dvh ;
@@ -268,10 +269,11 @@ h1 {
     /* background-color: magenta; */
 }
 
+
+
 button {
     font-family: "Aloja-Light";
 }
-
 
 .button_list button {
     display: flex;
@@ -279,20 +281,21 @@ button {
     justify-content: center;
     text-decoration: none;
     color: var(--lightest-color);
-    font-size: 20px;
+    font-size: 22px;
     border-radius: 20px;
-    width: 18em;
-    height: 5em;
-    margin-left : 10% ; 
+    width: 15em;
+    height: 4em;
+    margin-left : auto ;
+    margin-right : auto ;
     transition: 0.3s;
     background: linear-gradient(var(--main-color),var(--darkest-color));
     margin-bottom : 3em
   }
-  
+
   .button_list button:hover {
     border-bottom-width: 0;
-    animation : 1.3s ease-in-out  infinite alternate pickme 
-    
+    animation : 1.3s ease-in-out  infinite alternate pickme
+
   }
 
   @keyframes pickme {
@@ -307,13 +310,13 @@ button {
 @keyframes itsme {
     from { transform: scale(1);}
     to {transform: scale(1.1);}
-    
+
 }
 
 
 
-/* Pour cacher les éléments */ 
+/* Pour cacher les éléments */
 
 .hide {
-    display: none 
+    display: none
 }

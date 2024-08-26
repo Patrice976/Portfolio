@@ -1,11 +1,18 @@
 @font-face {
-    /* font-family: Sunday Funday ;
-    src: url(font/sunday_funday/Sunday\ Funday.ttf); */
-/* 
-    font-family: Madloud;
-    src : url(font/tf_madloud/TF\ Madloud\ DEMO.ttf) */
 
-    font-family :  Aloja-Light ;
-    src: url(Aloja-Free-Font/Aloja-Light.otf)
+    /* font-family : Tlakah ;
+    src : url(./Talaka/tlakah.ttf) format('truetype'); */
+
+    /* font-family : Harmony ;
+    src : url(./BalletOfHarmony/Ballet\ Harmony.ttf) format('truetype'); */
+
+    font-family: foxlight ;
+    src : url(./foxlight/Foxlite\ Script.ttf) format('truetype')
 
 }
+
+@font-face {
+    font-family :  Aloja-Light ;
+    src: url(Aloja-Free-Font/Aloja-Light.otf) ;
+}
+ 
