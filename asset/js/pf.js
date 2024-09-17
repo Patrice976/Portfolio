@@ -18,7 +18,9 @@ imgMe.addEventListener('mouseover', ()=>{
                 imgMe.alt = "Jeune métisse allongé dans des feuille d'automne, thème rouge. Sweat rouge avec capuche blanche, un pulle marron/noir et un collier"
                 imgMe.style.opacity = 1 ;
                 imgMe.style.height = '55%';
-                mediv.style.marginLeft = '15em';
+                imgMe.style.marginLeft = "20%"
+                
+                
                 
             
             },300)
@@ -39,7 +41,8 @@ imgMe.addEventListener('mouseover', ()=>{
             imgMe.alt = "illustration jeune métisse sur fond jaune , cheuveux bouclé, lunette de soleil aux verres orangées , boucle d'oreils, tatouage sur le cou et sweat jaune "
             imgMe.style.opacity = 1 ;
             imgMe.style.height = '65%';
-            mediv.style.marginLeft = '10em';
+            imgMe.style.marginLeft = "15%"
+
 
         },300)
         document.documentElement.style.setProperty('--main-color', '#8C4303');
@@ -113,7 +116,9 @@ const ImgToText = {
     'vscode_logo' : 'txt_vscode',
     //Parti SoftSkillz
     'teamwork_logo' : 'txt_teamwork',
-    'creativity_logo' : 'txt_creativity'
+    'creativity_logo' : 'txt_creativity',
+    'sociability_logo' : 'txt_sociability',
+    'empathy_logo' : 'txt_empathy'
 
 }
 let stack_txt = document.querySelectorAll(".stack_txt span")
@@ -133,10 +138,52 @@ for (let index = 0; index < stack_img.length; index++) { //On parcours l'enssemb
         let TargetTxt = document.getElementById(txt) // on selectionne l'élément grace à l'id récupérer dans l'objet ImgToText
         console.log(imgID)
         TargetTxt.classList.remove('hide')  // aficher le texte
-        TargetTxt.scrollIntoView({behavior: "smooth", block :"nearest"})
+        TargetTxt.scrollIntoView({behavior: "smooth", block :"nearest"}) //Faire en sorte que la fin du texte soit visible sur l'écrant utilisateur
         
 
 
     })}
+
+/* section3 : faire disparaitre les texte lorsqu'on sort de la section 3 */
+
+
+
+//section 4 : Faire apparaitre du contenu au clic 
+
+idProjets = ['Mythe_au_logis','superhero_api','mokey_adventure','portfolio','Dicosaurus']
+let div = document.getElementById(idProjets[0]);
+
+
+function hideButton(Cible) {
+    for (let index = 0; index < Cible.length; index++) {
+        let div = document.getElementById(Cible[index]);
+        let projetdiv = document.querySelector('#'+Cible[index]+' div')
+        console.log('#'+Cible[index]+' div')
+        console.log(projetdiv)
+        projetdiv.hidden = true
+    }
+}
+
+function showButton(button) {
+    for (let index = 0; index < button.length; index++) {
+        let array = button;
+        let div = document.getElementById(button[index]);
+        let projetdiv = document.querySelector('#'+button[index]+' div')
+        div.addEventListener('click', () => {
+            console.log('click')
+            hideButton(button)
+            projetdiv.hidden = false 
+        })
+        
+    }
+}
+
+hideButton(idProjets)
+showButton(idProjets)
+
+
+
+
+
 
 
