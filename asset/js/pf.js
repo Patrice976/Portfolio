@@ -73,6 +73,7 @@ buttonMaStack.addEventListener ('click', ()=>{
     displayStack.classList.remove('hide')
     displayOutils.classList.add('hide')
     displaySkills.classList.add('hide')
+    displayStack.scrollIntoView({behavior: "smooth", block: "center"})
 }
 )
 
@@ -80,6 +81,7 @@ buttonOutils.addEventListener ('click', ()=>{
     displayStack.classList.add('hide')
     displayOutils.classList.remove('hide')
     displaySkills.classList.add('hide')
+    displayOutils.scrollIntoView({behavior: "smooth", block: "center"})
 }
 )
 
@@ -87,6 +89,7 @@ buttonSkills.addEventListener ('click', ()=>{
     displayStack.classList.add('hide')
     displayOutils.classList.add('hide')
     displaySkills.classList.remove('hide')
+    displaySkills.scrollIntoView({behavior: "smooth", block: "center"})
 }
 )
 
@@ -144,39 +147,46 @@ for (let index = 0; index < stack_img.length; index++) { //On parcours l'enssemb
 
     })}
 
-/* section3 : faire disparaitre les texte lorsqu'on sort de la section 3 */
-
 
 
 //section 4 : Faire apparaitre du contenu au clic 
 
 idProjets = ['Mythe_au_logis','superhero_api','mokey_adventure','portfolio','Dicosaurus']
-let div = document.getElementById(idProjets[0]);
 
-
-function hideButton(Cible) {
+function hideButton(Cible) { //cache toutes les div projets 
     for (let index = 0; index < Cible.length; index++) {
-        let div = document.getElementById(Cible[index]);
-        let projetdiv = document.querySelector('#'+Cible[index]+' div')
-        console.log('#'+Cible[index]+' div')
+        let projetdiv = document.querySelector('#'+Cible[index]+' .project_name') //selectionne la div enfant du projet sélectionné
+        let background = document.querySelector('#'+Cible[index]+' .bg_projet')
         console.log(projetdiv)
-        projetdiv.hidden = true
+        projetdiv.style.display = "none" //désactive la div
+        projetdiv.style.opacity = '0' //setup la transition sur l'opacité
+        background.style.opacity ='1'
     }
 }
 
 function showButton(button) {
     for (let index = 0; index < button.length; index++) {
-        let array = button;
         let div = document.getElementById(button[index]);
-        let projetdiv = document.querySelector('#'+button[index]+' div')
-        div.addEventListener('click', () => {
-            console.log('click')
+        let projetdiv = document.querySelector('#'+button[index]+' .project_name')
+        let background = document.querySelector('#'+button[index]+' .bg_projet')
+        div.addEventListener('mouseover', () => {
+            console.log('ok')
             hideButton(button)
-            projetdiv.hidden = false 
+            projetdiv.style.display = 'flex'
+            projetdiv.style.opacity = '1'
+            background.style.opacity = '0.2'
+            console.log(projetdiv.style.display)
+            
         })
+        div.addEventListener('mouseout', () => {
+            hideButton(button)  
+
+        })
+
         
     }
 }
+
 
 hideButton(idProjets)
 showButton(idProjets)

@@ -296,6 +296,7 @@ button {
   }
 
   .button_list button:hover {
+    cursor:pointer;
     border-bottom-width: 0;
     animation : 1.3s ease-in-out  infinite alternate pickme
 
@@ -307,12 +308,14 @@ button {
   }
 
 .stack_img img:hover {
-    animation : 0.8s ease-in-out infinite alternate itsme
+    cursor:pointer;
+    animation : 0.5s ease-in-out infinite alternate itsme ;
+    
 }
 
 @keyframes itsme {
     from { transform: scale(1);}
-    to {transform: scale(1.1);}
+    to {transform: scale(1.2);}
 
 }
 
@@ -324,24 +327,128 @@ button {
 .div4 h2 {
     text-align: center;
     font-size: 3em;
+    margin-bottom: 2em;
 }
 
-.projectlist { 
-    display: flex;
+.allprojectlist { 
+    display: grid ; 
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5%;
+    width : 100%;
+    margin : auto;
+
 
 }
 
 .projectlistcontainer {
+    position : relative;
+    justify-items: center;
     border: solid var(--main-color);
-    margin : 10%;
-    width : 60%;
-    height : 60%;
-    padding: 20px;
+    width: 70dvh;
+    height: 30dvh;
+    margin : auto ; 
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.bg_projet {
+    position : absolute;
+    top : 0;
+    left : 0;
+    width: 100%;
+    height : 100%;
+    z-index: -1;
+    background-color: aqua;
+    opacity: 1;
+}
+
+.bg_projet:hover {
+    opacity: 0.25;
+}
+
+
+#Mythe_au_logis .bg_projet  {
+    background-image: url(../../asset/img/mythe_au_logis.png);
+    background-size: cover ;
+}
+
+
+#superhero_api .bg_projet {
+    background-image: url(../../asset/img/SuperHeroAPI.PNG);
+    background-size: cover;
+}
+
+#mokey_adventure .bg_projet {
+    background-image: url(../../asset/img/MonkeyAdventure.PNG);
+    background-size: cover;
+}
+
+#portfolio .bg_projet {
+    background-image: url(../../asset/img/portefolio.PNG);
+    background-size: cover;
+}
+
+#Dicosaurus .bg_projet {
+    background-image: url(../../asset/img/dino_neutral3.PNG);
+    background-size: cover;
 }
 
 .project_name {
-     
+   display : flex;
+   align-items: baseline;
+   transition : opacity 3s 
 }
+
+
+.project_name h1 {
+    z-index : 2;
+    font-size: 6em;
+    text-align: center;
+}
+
+.projet_stack {
+    z-index : 1;
+    display: flex;
+    flex-direction: column;
+    animation : 2s ease-in-out  forwards showstacks, 1.75s ease-in-out  forwards apparition; 
+      
+}
+.projet_stack img {
+
+    height: 50%;
+    width : 50%;
+
+}
+
+.bg_projet {
+    transition : opacity 0.5s 
+}
+.projet_presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300%
+}
+
+.projet_presentation button {
+    width : 50%
+}
+
+@keyframes showstacks {
+    from { transform : translateX(0%)}
+    to {transform : translateX(100%)}
+  }
+
+  @keyframes apparition {
+    from { opacity : 0}
+    to {opacity : 100}
+  }
+
+
+
+
 
 
 /* Pour cacher les éléments */
