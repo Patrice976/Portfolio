@@ -1,4 +1,4 @@
-// variable première section 
+// variable première section
 
 let imgMe = document.getElementById('me')
 let mediv = document.querySelector(".img_container")
@@ -8,10 +8,10 @@ let red = false
 let passion = document.querySelector('.passions')
 
 
-// première section : changement de theme au survol de l'image 
+// première section : changement de theme au survol de l'image
 
 imgMe.addEventListener('mouseover', ()=>{
-    if(red === false) { 
+    if(red === false) {
             imgMe.style.opacity = 0 ;
             setTimeout(()=> {
                 imgMe.src = 'asset/img/selfr.jpeg' ;
@@ -19,10 +19,10 @@ imgMe.addEventListener('mouseover', ()=>{
                 imgMe.style.opacity = 1 ;
                 imgMe.style.height = '55%';
                 imgMe.style.marginLeft = "20%"
-                
-                
-                
-            
+
+
+
+
             },300)
             document.documentElement.style.setProperty('--main-color', '#400101');
             document.documentElement.style.setProperty('--lightest-color', '#F2A663');
@@ -31,8 +31,8 @@ imgMe.addEventListener('mouseover', ()=>{
             document.documentElement.style.setProperty('--darkest-color', '#BF2626');
             document.documentElement.style.setProperty('--police-color', '#F2ECE4');
 
-        
-        red = true 
+
+        red = true
     }
     else {
         imgMe.style.opacity = 0 ;
@@ -55,7 +55,7 @@ imgMe.addEventListener('mouseover', ()=>{
     }})
 
 
-//troisième section : Quand on appuie sur un des boutons, le contenu de ce dernier s'afficher 
+//troisième section : Quand on appuie sur un des boutons, le contenu de ce dernier s'afficher
 
 
 let buttonMaStack = document.getElementById('stack')
@@ -64,16 +64,22 @@ let buttonOutils = document.getElementById('outils')
 let displayOutils = document.querySelector('.mes_outils')
 let buttonSkills = document.getElementById('skills')
 let displaySkills = document.querySelector('.mes_skills')
+let clickMe = {transform : ["translateX(-10px)","translateX(10px)","translateX(-10px)","translateX(10px)","translateX(0px)"]}
 
-console.log(displayStack)
-console.log(displayOutils)
-console.log(displaySkills)
+let logoStack = document.querySelector(".ma_stack .stack_img")
+let logoOutils = document.querySelector(".mes_outils .stack_img")
+let logoSkills = document.querySelector(".mes_skills .stack_img")
+
+function playanimation(cible,animation,temps) {
+    cible.animate(animation,temps)
+}
 
 buttonMaStack.addEventListener ('click', ()=>{
     displayStack.classList.remove('hide')
     displayOutils.classList.add('hide')
     displaySkills.classList.add('hide')
     displayStack.scrollIntoView({behavior: "smooth", block: "center"})
+    playanimation(logoStack,clickMe,600)
 }
 )
 
@@ -82,6 +88,8 @@ buttonOutils.addEventListener ('click', ()=>{
     displayOutils.classList.remove('hide')
     displaySkills.classList.add('hide')
     displayOutils.scrollIntoView({behavior: "smooth", block: "center"})
+    playanimation(logoOutils,clickMe,600)
+
 }
 )
 
@@ -90,13 +98,15 @@ buttonSkills.addEventListener ('click', ()=>{
     displayOutils.classList.add('hide')
     displaySkills.classList.remove('hide')
     displaySkills.scrollIntoView({behavior: "smooth", block: "center"})
+    playanimation(logoSkills,clickMe,600)
+
 }
 )
 
 
 
 
-// troisième section : au clique sur l'image affiche le texte qui lui correspond 
+// troisième section : au clique sur l'image affiche le texte qui lui correspond
 
 const StackToText = {
     'img_js' : 'txt_js',
@@ -130,30 +140,30 @@ let stack_img = document.querySelectorAll(".stack_img img")
 
 for (let index = 0; index < stack_img.length; index++) { //On parcours l'enssemble des image clicable
     const interactible_img = stack_img[index];
-    interactible_img.addEventListener ('click',function() { //On attache au image clicable un event listener 
-        for (let i = 0; i < stack_txt.length; i++) { // Boucle pour cacher tout les éléments texte lié aux images 
+    interactible_img.addEventListener ('click',function() { //On attache au image clicable un event listener
+        for (let i = 0; i < stack_txt.length; i++) { // Boucle pour cacher tout les éléments texte lié aux images
             const txtForImg = stack_txt[i];
             txtForImg.classList.add('hide')
         }
-        let imgID= this.getAttribute('id') //récupération de l'ID lié à l'image cliqué 
-        let txt = ImgToText[imgID] // récupéré l'id du txt correspondant à l'img 
+        let imgID= this.getAttribute('id') //récupération de l'ID lié à l'image cliqué
+        let txt = ImgToText[imgID] // récupéré l'id du txt correspondant à l'img
 
         let TargetTxt = document.getElementById(txt) // on selectionne l'élément grace à l'id récupérer dans l'objet ImgToText
         console.log(imgID)
         TargetTxt.classList.remove('hide')  // aficher le texte
         TargetTxt.scrollIntoView({behavior: "smooth", block :"nearest"}) //Faire en sorte que la fin du texte soit visible sur l'écrant utilisateur
-        
+
 
 
     })}
 
 
 
-//section 4 : Faire apparaitre du contenu au clic 
+//section 4 : Faire apparaitre du contenu au clic
 
 idProjets = ['Mythe_au_logis','superhero_api','mokey_adventure','portfolio','Dicosaurus']
 
-function hideButton(Cible) { //cache toutes les div projets 
+function hideButton(Cible) { //cache toutes les div projets
     for (let index = 0; index < Cible.length; index++) {
         let projetdiv = document.querySelector('#'+Cible[index]+' .project_name') //selectionne la div enfant du projet sélectionné
         let background = document.querySelector('#'+Cible[index]+' .bg_projet')
@@ -176,14 +186,14 @@ function showButton(button) {
             projetdiv.style.opacity = '1'
             background.style.opacity = '0.2'
             console.log(projetdiv.style.display)
-            
+
         })
         div.addEventListener('mouseout', () => {
-            hideButton(button)  
+            hideButton(button)
 
         })
 
-        
+
     }
 }
 

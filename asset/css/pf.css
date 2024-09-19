@@ -313,9 +313,11 @@ button {
     
 }
 
+
+
 @keyframes itsme {
-    from { transform: scale(1);}
-    to {transform: scale(1.2);}
+    from { transform: scale(1.1);}
+    to {transform: scale(1.5);}
 
 }
 
@@ -327,14 +329,14 @@ button {
 .div4 h2 {
     text-align: center;
     font-size: 3em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .allprojectlist { 
     display: grid ; 
     justify-items: center;
     grid-template-columns: 1fr 1fr;
-    row-gap: 5%;
+    row-gap: 15%;
     width : 100%;
     margin : auto;
 
@@ -342,14 +344,21 @@ button {
 }
 
 .projectlistcontainer {
+    display: flex;
     position : relative;
     justify-items: center;
+    align-items: center;
     border: solid var(--main-color);
-    width: 70dvh;
-    height: 30dvh;
+    width: 80dvh;
+    height: 38dvh;
     margin : auto ; 
     justify-content: center;
     box-sizing: border-box;
+}
+
+.projet_presentation {
+    padding: 10%;
+    color: var(--police-color);
 }
 
 .bg_projet {
@@ -416,9 +425,14 @@ button {
 }
 .projet_stack img {
 
-    height: 50%;
-    width : 50%;
+    height: 60%;
+    width : 60%;
 
+}
+
+.project_name {
+    align-items: center ;
+    display: flex;
 }
 
 .bg_projet {
