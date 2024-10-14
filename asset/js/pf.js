@@ -64,17 +64,21 @@ let buttonOutils = document.getElementById('outils')
 let displayOutils = document.querySelector('.mes_outils')
 let buttonSkills = document.getElementById('skills')
 let displaySkills = document.querySelector('.mes_skills')
+let buttonCV = document.getElementById('CV')
+let displayCV = document.querySelector('.CV')
 let clickMe = {transform : ["translateX(-10px)","translateX(10px)","translateX(-10px)","translateX(10px)","translateX(0px)"]}
 
 let logoStack = document.querySelector(".ma_stack .stack_img")
 let logoOutils = document.querySelector(".mes_outils .stack_img")
 let logoSkills = document.querySelector(".mes_skills .stack_img")
 
+console.log(buttonCV)
 function playanimation(cible,animation,temps) {
     cible.animate(animation,temps)
 }
 
 buttonMaStack.addEventListener ('click', ()=>{
+    console.log('stackCLIC')
     displayStack.classList.remove('hide')
     displayOutils.classList.add('hide')
     displaySkills.classList.add('hide')
@@ -84,6 +88,7 @@ buttonMaStack.addEventListener ('click', ()=>{
 )
 
 buttonOutils.addEventListener ('click', ()=>{
+    console.log('outilCLIC')
     displayStack.classList.add('hide')
     displayOutils.classList.remove('hide')
     displaySkills.classList.add('hide')
@@ -94,6 +99,7 @@ buttonOutils.addEventListener ('click', ()=>{
 )
 
 buttonSkills.addEventListener ('click', ()=>{
+    console.log('skillsCLIC')
     displayStack.classList.add('hide')
     displayOutils.classList.add('hide')
     displaySkills.classList.remove('hide')
@@ -102,7 +108,6 @@ buttonSkills.addEventListener ('click', ()=>{
 
 }
 )
-
 
 
 
@@ -163,39 +168,74 @@ for (let index = 0; index < stack_img.length; index++) { //On parcours l'enssemb
 
 idProjets = ['Mythe_au_logis','superhero_api','mokey_adventure','portfolio','Dicosaurus']
 
+let forge = [ //banque image pour l'animaion 
+    'asset/img/animation marteau/Forge.png',
+    'asset/img/animation marteau/forge2.png',
+    'asset/img/animation marteau/forge3.png',
+    'asset/img/animation marteau/forge4.png',
+    'asset/img/animation marteau/forge5.png',
+    'asset/img/animation marteau/forge6.png',
+    'asset/img/animation marteau/Group 7.png',
+    'asset/img/animation marteau/Group 8.png',
+    'asset/img/animation marteau/Group 8.png',
+    'asset/img/animation marteau/Group 7.png',
+    'asset/img/animation marteau/forge6.png',
+    'asset/img/animation marteau/forge5.png',
+    'asset/img/animation marteau/forge4.png',
+    'asset/img/animation marteau/forge3.png',
+    'asset/img/animation marteau/forge2.png',
+    'asset/img/animation marteau/Forge.png'
+]
+
 function hideButton(Cible) { //cache toutes les div projets
     for (let index = 0; index < Cible.length; index++) {
         let projetdiv = document.querySelector('#'+Cible[index]+' .project_name') //selectionne la div enfant du projet sélectionné
         let background = document.querySelector('#'+Cible[index]+' .bg_projet')
-        console.log(projetdiv)
+        let forgeAnimation = document.querySelector('#'+Cible[index]+' .project_name .work_in_progress')
+        console.log('#'+Cible[index]+' .project_name .work_in_progress')
         projetdiv.style.display = "none" //désactive la div
         projetdiv.style.opacity = '0' //setup la transition sur l'opacité
         background.style.opacity ='1'
+        
     }
 }
 
 function showButton(button) {
+    let animation;
     for (let index = 0; index < button.length; index++) {
         let div = document.getElementById(button[index]);
         let projetdiv = document.querySelector('#'+button[index]+' .project_name')
         let background = document.querySelector('#'+button[index]+' .bg_projet')
+        let forgeAnimation = document.querySelector('#'+button[index]+' .project_name .work_in_progress img')
+        
         div.addEventListener('mouseover', () => {
             console.log('ok')
             hideButton(button)
             projetdiv.style.display = 'flex'
             projetdiv.style.opacity = '1'
-            background.style.opacity = '0.2'
+            background.style.opacity = '0.02'
+            forgeAnimation.style.display = 'flex'
             console.log(projetdiv.style.display)
+            let forgeindex =0
+            animation = setInterval (() => { //animation forge en cours
+            forgeAnimation.src = forge[forgeindex];
+            console.log(forgeAnimation)
+            forgeindex = (forgeindex + 1) % forge.length;
+        },60)
 
         })
         div.addEventListener('mouseout', () => {
             hideButton(button)
+            clearInterval(animation)
 
         })
 
 
     }
 }
+
+
+
 
 
 hideButton(idProjets)

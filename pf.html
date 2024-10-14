@@ -7,10 +7,12 @@
     <!-- implémentation js  -->
     <script src="asset/js/pf.js" defer></script>
     <!-- Police d'écriture  -->
+     <!-- Police Aloja-->
     <link rel="stylesheet" href="font/Aloja-Free-Font/Aloja-Light.otf">
     <link rel="stylesheet" href="font/font.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Police Zain-->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Dancing+Script:wght@400..700&family=Merienda:wght@300..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,15 +20,20 @@
 <!-- CSS -->
     <link rel="stylesheet" href="asset/css/theme.css">
     <link rel="stylesheet" href="asset/css/pf.css">
-    <title>Bienvenu chez moi </title>
+    <title>Portfolio de Patrice Catinat</title>
 </head>
 <body class="yellowTheme ">
     <header class="headery">
-        <div>
-        <a href="">A propos</a>
-        <a href="">Compétences</a>
-        <a href="">Projet</a>
-        <a href="">Contact</a>
+        <div class="nav">
+            <a href="#a_propos">A propos</a>
+            <a href="#competences">Compétences</a>
+            <a href="#projets">Projet</a>
+            <a href="">Contact</a>
+        </div>
+        <div class="linkResaux"> 
+            <a href="https://www.linkedin.com/in/patrice-catinat/" target =_blank><img class="logoResaux" src="asset\img\linkedin.webp" alt="logo linkedin"></a>
+            <a href="https://github.com/Patrice976" target="_blank"><img class="logoResaux" src="asset\img\github.png" alt="logo github"></a>
+            
         </div>
         
         
@@ -43,13 +50,15 @@
     </div>
     </section>
 
+    <a name="a_propos"></a>
     <section class="div2">
-
+        
         <div class="contenu_a_propos">
+            
             <h2>Tu veux en savoir plus sur moi ? </h2>
             <div class ="txt">
                 Ancien professeur des écoles issus d'un cursus de psychologie j'ai décidé de me reconvertir dans le monde du développement web. <br>
-                Curieux, créatif et dynamique j'ai rejoint la Ada Tech School pour me former au métier de développeur web et application.<br>
+                Curieux, créatif et dynamique j'ai rejoint la Ada Tech School pour me former au métier de développeur web et application orienté FullStack.<br>
                 J'aime apprendre et je cherche en permanence à me dépasser. <br>
                 Je code avec amour et passion et j'essaie de toujours apporter une petite touche de Patou dans tout ce que je touche. <br> 
             </div>
@@ -78,7 +87,7 @@
 
                     <div class="passions" id="cuisine">
                         <img src="/asset/img/cuisine.jpeg" alt=" un gros plan sur un couteau entrain de couper de la ciboulette sur un plan de travail avec des grain de poivre devant" >
-                        <div class="txt_under_img ltxt"><h2>Papa cuisto</h2> La cuisine me permet de stimuler ma créativité à travers des visuels et des mélanges de goûts agréable et/ou audacieux.<br> J'aime partager ces moments avec ma fille de 1 an  et lui faire découvrir tout pleint de plats différent </div>
+                        <div class="txt_under_img ltxt"><h2>Papa cuisto</h2> La cuisine me permet de stimuler ma créativité à travers des visuels et des mélanges de goûts agréable et/ou audacieux.<br> J'aime partager ces moments avec ma fille de 1 an  et lui faire découvrir tout plein de plats différent </div>
                     
                     </div>
                 </div>
@@ -86,33 +95,37 @@
     </div>
     </section>
 
+    
     <section class="div3">
-        <div class="button_list"> 
+        <a name="competences"></a> 
+        <div class="button_list">
             <button id="stack">Ma stack</button>   
             <button id="outils">Mes outils</button>
-            <button id="skills">mes soft skills</button>
-            <button id="CV">CV</button>
+            <button id="skills">Mes soft skills</button>
+            <a href="asset/img/CV Pat'.pdf" target="_blank"><button id="CV">CV</button></a>
+            
         </div>
+        
         <section class="display_button">
             <div class="ma_stack hide">
                 <div class="stack_img" id="pourlinstant">
-                    <img src="asset\img\logo techno\JavaScript-logo.png" id="img_js" alt="img_js">
-                    <img src="asset\img\logo techno\Python-logo-notext.svg.png" id="img_python" alt="img_python">
+                    <img src="asset/img/logo techno/JavaScript-logo.png" id="img_js" alt="img_js">
+                    <img src="asset/img/logo techno/Python-logo-notext.svg.png" id="img_python" alt="img_python">
                 </div>
                 <div class="stack_txt">
-                    <span id="txt_js" class="hide" >
+                    <span id="txt_js" class="hide">
                         <h2>Javascript</h2>
-                        Mon langage favori, présent sur tout mes projets, je l'utilise principalement pour créer des animations et des interactions dynamiques sur mes sites.
+                        Mon langage favori, présent sur tous mes projets, je l'utilise principalement pour créer des animations et des interactions dynamiques sur mes sites.
                     </span>
-                    <span id="txt_python" class="hide" >
+                    <span id="txt_python" class="hide">
                         <h2>Python</h2>
-                        C'est un langage que j'ai découvert au lycée, je n'y est pas toucher depuis, j'essais de me réapproprier ce langages au travers divers exercices proposé par ma formation 
+                        C'est un langage que j'ai découvert au lycée. Je n'y ai pas touché depuis, mais j'essaie de me réapproprier ce langage à travers divers exercices proposés par ma formation.
                     </span>
                 </div>
             </div>
-        </div>
-        
+    
             <div class="mes_outils hide"> 
+                
                 <div class="stack_img">
                     <img src= "asset\img\logo techno\Figma-logo.svg.png" id="figma_logo" alt="logo figma" >
                     <img src= "asset\img\logo techno\icone-github-jaune.png" id="github_logo" alt="logo github">
@@ -145,38 +158,45 @@
                         Un IDE intuitive et flexible riche en extension personnalisables. J'apprécie particulièrement coder avec cet outil, qui rend le développement agréable et efficace grâce à son ergonomie.  
                     </span>
                 </div>
+
             </div>
+    
             <div class="mes_skills hide"> 
-                    <div class="stack_img">
-                        <img src= "asset\img\logo skillz\teamwork.png" id="teamwork_logo" alt="logo travail d'équipe">
-                        <img src="asset\img\logo skillz\créativité.png" id="creativity_logo" alt=" logo créativité">
-                        <img src="asset\img\logo skillz\sensducontact-.png" id="sociability_logo" alt="logo sociabilité">
-                        <img src="asset\img\logo skillz\empathie.png" id="empathy_logo" alt="logo empathie">
-                    </div>
-                <div class="stack_txt">
-                    <span id="txt_teamwork" class="hide" >
-                        <h2>Travail d'équipe</h2>
-                        "Seul, on va plus vite, mais ensemble, on va plus loin." Cette citation résonne particulièrement avec ma vision du travail en équipe. Pour moi, la collaboration n'est pas seulement essentielle, elle est également une source de motivation et de créativité.
-                        Mon expérience variée, notamment lors de la conception d'expériences en psychologie et en tant que professeur des écoles, m'a permis de développer une véritable sensibilité au travail d'équipe.  
-                    </span>             
-                    <span id="txt_creativity" class="hide" >
-                        <h2>Créativité</h2>
-                        Créatif et passionné, j'ai toujours aimé concevoir des solutions originales. En tant que professeur des écoles, j'ai constamment cherché à produire du contenu stimulant et engageant pour favoriser l'apprentissage de mes élèves . Aujourd'hui je souhaite utiliser cette créativité pour résooudre des problèmes et proposer des visuels stimulant pour les utilisateurs.             
-                    </span>
-                    <span id="txt_sociability" class="hide" >
-                        <h2>Sens du contact</h2>
-                        Mon optimisme naturel et à ma bonne humeur, facilite grandement mes interactions avec les autres. Créer des relations authentiques et de qualité est pour moi un véritable atout. En tant qu'ancien enseignant, j'ai su tisser des liens de confiance solides avec les parents, les élèves et mes collègues. Cette aptitude à établir des connexions humaines est au cœur de mon approche professionnelle, me permettant de collaborer efficacement dans différents environnements.
-                    </span>
-                    <span id="txt_empathy" class="hide" > 
-                        <h2>Empathie</h2>
-                        Grâce à mon vécu personnel et ma formation en psychologie, j'ai développé une profonde capacité à comprendre les autres. Je sais reconnaître les émotions de ceux qui m'entourent, et je suis en mesure de les accompagner de manière bienveillante lorsqu'ils en ressentent le besoin. J'ai un regard attentif qui me permet de percevoir rapidement les signes de mal-être, et je n'hésite jamais à offrir mon aide et mon soutien.
-                    </span>
+                <div class="stack_img">
+                    <img src= "asset\img\logo skillz\teamwork.png" id="teamwork_logo" alt="logo travail d'équipe">
+                    <img src="asset\img\logo skillz\créativité.png" id="creativity_logo" alt=" logo créativité">
+                    <img src="asset\img\logo skillz\sensducontact-.png" id="sociability_logo" alt="logo sociabilité">
+                    <img src="asset\img\logo skillz\empathie.png" id="empathy_logo" alt="logo empathie">
+                </div>
+            <div class="stack_txt">
+                <span id="txt_teamwork" class="hide" >
+                    <h2>Travail d'équipe</h2>
+                    "Seul, on va plus vite, mais ensemble, on va plus loin." Cette citation résonne particulièrement avec ma vision du travail en équipe. Pour moi, la collaboration n'est pas seulement essentielle, elle est également une source de motivation et de créativité.
+                    Mon expérience variée, notamment lors de la conception d'expériences en psychologie et en tant que professeur des écoles, m'a permis de développer une véritable sensibilité au travail d'équipe.  
+                </span>             
+                <span id="txt_creativity" class="hide" >
+                    <h2>Créativité</h2>
+                    Créatif et passionné, j'ai toujours aimé concevoir des solutions originales. En tant que professeur des écoles, j'ai constamment cherché à produire du contenu stimulant et engageant pour favoriser l'apprentissage de mes élèves . Aujourd'hui je souhaite utiliser cette créativité pour résooudre des problèmes et proposer des visuels stimulant pour les utilisateurs.             
+                </span>
+                <span id="txt_sociability" class="hide" >
+                    <h2>Sens du contact</h2>
+                    Mon optimisme naturel et à ma bonne humeur, facilite grandement mes interactions avec les autres. Créer des relations authentiques et de qualité est pour moi un véritable atout. En tant qu'ancien enseignant, j'ai su tisser des liens de confiance solides avec les parents, les élèves et mes collègues. Cette aptitude à établir des connexions humaines est au cœur de mon approche professionnelle, me permettant de collaborer efficacement dans différents environnements.
+                </span>
+                <span id="txt_empathy" class="hide" > 
+                    <h2>Empathie</h2>
+                    Grâce à mon vécu personnel et ma formation en psychologie, j'ai développé une profonde capacité à comprendre les autres. Je sais reconnaître les émotions de ceux qui m'entourent, et je suis en mesure de les accompagner de manière bienveillante lorsqu'ils en ressentent le besoin. J'ai un regard attentif qui me permet de percevoir rapidement les signes de mal-être, et je n'hésite jamais à offrir mon aide et mon soutien.
+                </span>
+
             </div>
+
         </section>
+    </section>
 
     </section>
     
-    <section class="div4">
+    
+    <section class="div4"><a name="projets"></a> 
+    
         <h2>Projets</h2>
 
         <div class="allprojectlist">
@@ -186,13 +206,17 @@
                 <div class="project_name" >
                     <div class="projet_presentation">
                         <h2>Mythe_au_logis</h2>
-                        <p>Un site autour de la mythologie qui ressence des informations sur divers divinités et mythologies du monde.</p>
-                        <button>En savoir plus </button>
+                        <p class="txt">Un site autour de la mythologie qui ressence des informations sur divers divinités et mythologies du monde.</p>
+                        <button> <a href="https://mythe-au-logis2.vercel.app/" target="_blank">Visiter le site</a> </button>
                     </div>
                     <div class = "projet_stack">
                         <img src ="asset/img/logo techno/html.png">
                         <img src="asset/img/logo techno/css.png">
                         <img src="asset\img\logo techno/JS.png">
+                    </div>
+                    <div class="work_in_progress">
+                        <img >
+                        <p class="txt"> En cours...</p>
                     </div>
                     
                 </div>
@@ -202,13 +226,18 @@
                 <div class="bg_projet"></div>
                 <div class="project_name" >
                     <div class="projet_presentation">
-                        <p>Un site autour de la mythologie qui ressence des informations sur divers divinités et mythologies du monde.</p>
-                        <button>En savoir plus </button>
+                        <h2>SuperHero_api</h2>
+                        <p class="txt">Un site des duels de carte basé sur les héro de comics et quelques autres surprises </p>
+                        <button><a href="https://hero-api-red.vercel.app/" target="_blank">Vister le site </a> </button>
                     </div>
                     <div class = "projet_stack">
                         <img src ="asset/img/logo techno/html.png">
                         <img src="asset/img/logo techno/css.png">
                         <img src="asset\img\logo techno/JS.png">
+                    </div>
+                    <div class="work_in_progress">
+                        <img>
+                        <p class="txt"> En cours...</p>
                     </div>
                     
                 </div>
@@ -218,15 +247,13 @@
                 <div class="bg_projet"></div>
                 <div class="project_name" >
                     <div class="projet_presentation">
-                        <p>Un site autour de la mythologie qui ressence des informations sur divers divinités et mythologies du monde.</p>
-                        <button>En savoir plus </button>
+                        <h2>Mokey adventure</h2>
+                        <p class="txt">Un jeu type rpg dans lequel on incarne un singe qui doit libérer ses amis</p>
+                        <button> Découvrir le jeu</button>
                     </div>
-                    <div class = "projet_stack">
-                        <img src ="asset/img/logo techno/html.png">
-                        <img src="asset/img/logo techno/css.png">
-                        <img src="asset\img\logo techno/JS.png">
+                    <div class ="projet_stack">
+                        <img src ="asset/img/logo techno/Lua-Logo.svg.png">
                     </div>
-                    
                 </div>
             </div>
 
@@ -234,15 +261,15 @@
                 <div class="bg_projet"></div>
                 <div class="project_name" >
                     <div class="projet_presentation">
-                        <p>Un site autour de la mythologie qui ressence des informations sur divers divinités et mythologies du monde.</p>
-                        <button>En savoir plus </button>
+                        <h2>Portfolio</h2>
+                        <p class="txt">C'est là où nous somme actuellement, un site qui te montre qui je suis et une partie de mes projets </p>
+                        <button>Visiter de nouveau </button>
                     </div>
                     <div class = "projet_stack">
                         <img src ="asset/img/logo techno/html.png">
                         <img src="asset/img/logo techno/css.png">
                         <img src="asset\img\logo techno/JS.png">
                     </div>
-                    
                 </div>
             </div>
 
@@ -250,15 +277,15 @@
                 <div class="bg_projet"></div>
                 <div class="project_name" >
                     <div class="projet_presentation">
-                        <p>Un site autour de la mythologie qui ressence des informations sur divers divinités et mythologies du monde.</p>
-                        <button>En savoir plus </button>
+                        <h2>Dicosaurus</h2>
+                        <p class="txt">Une extension de navigateur qui te permet de définir les mots que tu surlignes </p>
+                        <button>Essayer l'extension </button>
                     </div>
                     <div class = "projet_stack">
                         <img src ="asset/img/logo techno/html.png">
                         <img src="asset/img/logo techno/css.png">
                         <img src="asset\img\logo techno/JS.png">
                     </div>
-                    
                 </div>
             </div>
 
@@ -276,8 +303,10 @@
 
         
     </section>
-    <section>
-
+    <section class="div5">
+        <h1> Vous souhaitez me contacter ? </h1>
+        <p>Mail : catinatp@gmail.com</p>
+        <p>Téléphone : 06 13 88 71 69</p>
     </section>
     
 </body>

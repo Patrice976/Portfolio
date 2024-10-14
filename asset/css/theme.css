@@ -1,10 +1,10 @@
 :root {
     --main-color: #8C4303; /* milieu */
     --lightest-color: #f2bf5e; /* full gauche */
-    --secondary-light-color: #D97F11;
+    --secondary-light-color: #F0A447;
     --secondary-dark-color: #40261D;
     --darkest-color: #0D0D0D;
-    --police-color : white ; 
+    --police-color : black ; 
     
    
 }
