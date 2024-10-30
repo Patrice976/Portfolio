@@ -422,6 +422,11 @@ button {
     background-size: cover;
 }
 
+#cozyNetwork .bg_projet {
+    background-image: url(../../asset/img/cozynetwork\ preview.png);
+    background-size: cover;
+}
+
 .project_name {
    position: relative; 
    display : flex;
@@ -532,7 +537,7 @@ button {
 
 @keyframes showstacks {
     from { transform : translateX(0%)}
-    to {transform : translateX(100%)}
+    to {transform : translateX(105%)}
   }
 
   @keyframes apparition {

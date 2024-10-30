@@ -166,7 +166,7 @@ for (let index = 0; index < stack_img.length; index++) { //On parcours l'enssemb
 
 //section 4 : Faire apparaitre du contenu au clic
 
-idProjets = ['Mythe_au_logis','superhero_api','mokey_adventure','portfolio','Dicosaurus']
+idProjets = ['Mythe_au_logis','superhero_api','mokey_adventure','portfolio','Dicosaurus','cozyNetwork']
 
 let forge = [ //banque image pour l'animaion 
     'asset/img/animation marteau/Forge.png',
