@@ -113,10 +113,6 @@ buttonSkills.addEventListener ('click', ()=>{
 
 // troisième section : au clique sur l'image affiche le texte qui lui correspond
 
-const StackToText = {
-    'img_js' : 'txt_js',
-    'img_python' : 'txt_python'
-}
 
 imgSec3= document.querySelector('.stack_img img')
 
@@ -125,6 +121,8 @@ const ImgToText = {
     //Partie Stack
     'img_js' : 'txt_js',
     'img_python' : 'txt_python',
+    'img_php' : 'txt_php',
+    'img_vue' : 'txt_vue',
     //Partie Outils
     'figma_logo' : 'txt_figma',
     'github_logo' : 'txt_github',
