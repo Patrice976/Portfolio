@@ -24,12 +24,15 @@ imgMe.addEventListener('mouseover', ()=>{
 
 
             },300)
-            document.documentElement.style.setProperty('--main-color', '#400101');
-            document.documentElement.style.setProperty('--lightest-color', '#F2A663');
-            document.documentElement.style.setProperty('--secondary-light-color', '#8C1E14');
-            document.documentElement.style.setProperty('--secondary-dark-color', '#261515');
-            document.documentElement.style.setProperty('--darkest-color', '#BF2626');
-            document.documentElement.style.setProperty('--police-color', '#F2ECE4');
+            document.documentElement.style.setProperty('--main-background-color', '#261515');
+            document.documentElement.style.setProperty('--sub-background-color', '#32211A');
+            document.documentElement.style.setProperty('--ter-background-color', '#402717');
+            document.documentElement.style.setProperty('--contrast-color', '#E89A88');
+            document.documentElement.style.setProperty('--shadow-color', '#1A0E0B');
+            document.documentElement.style.setProperty('--police-color', '#FFE9DC');
+            document.documentElement.style.setProperty('--police-color-light', '#32211A');
+
+
 
 
         red = true
@@ -45,11 +48,14 @@ imgMe.addEventListener('mouseover', ()=>{
 
 
         },300)
-        document.documentElement.style.setProperty('--main-color', '#ad5b13');
-        document.documentElement.style.setProperty('--lightest-color', '#f2bf5e');
-        document.documentElement.style.setProperty('--secondary-light-color', '#F0A447');
-        document.documentElement.style.setProperty('--secondary-dark-color', '#150c09');
-        document.documentElement.style.setProperty('--darkest-color', '#0D0D0D');
+        document.documentElement.style.setProperty('--main-background-color', '#f2bf5e');
+        document.documentElement.style.setProperty('--sub-background-color', '#F0A447');
+        document.documentElement.style.setProperty('--ter-background-color', '#643309');
+        document.documentElement.style.setProperty('--contrast-color', '#150c09');
+        document.documentElement.style.setProperty('--shadow-color', '#0D0D0D');
+        document.documentElement.style.setProperty('--police-color', '#000000');
+        document.documentElement.style.setProperty('--police-color-light', '#ffe8bd');
+
 
         red = false
     }})

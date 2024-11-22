@@ -1,12 +1,11 @@
 :root {
-    --main-color: #ad5b13; 
-    --lightest-color: #f2bf5e; 
-    --secondary-light-color: #F0A447;
-    --secondary-dark-color: #150c09;
-    --darkest-color: #0D0D0D;
-    --police-color : black ;
-    --police-color-light : #fcd587
+    --main-background-color: #f2bf5e; 
+    --sub-background-color: #F0A447;
+    --ter-background-color: #643309; 
+    --contrast-color: #150c09;
+    --shadow-color: #0D0D0D;
+    --police-color : rgb(0, 0, 0) ;
+    --police-color-light : #ffe8bd
     
    
 }
-

@@ -35,9 +35,9 @@ section {
     padding: 1.4em ;
     position : fixed ;
     width : 100% ;
-    background : linear-gradient(var(--main-color),var(--darkest-color)) ;
+    background : linear-gradient(var(--ter-background-color),var(--contrast-color)) ;
     height : 2.4em;
-    box-shadow: 5px 0px 9px 14px var(--main-color);
+    box-shadow: 5px 0px 9px 14px var(--ter-background-color);
     
 }
 
@@ -82,8 +82,8 @@ section {
 }
 
 .yellowTheme {
-    background: linear-gradient(var(--lightest-color) 25%,var(--secondary-light-color) 60%,var(--main-color));
-    color:var(--secondary-dark-color);
+    background: linear-gradient(var(--main-background-color) 25%,var(--sub-background-color) 60%,var(--ter-background-color));
+    color:var(--contrast-color);
 
 }
 
@@ -139,7 +139,7 @@ h2 {
     margin-top : 4em ;
     margin : 4em ;
     border-radius: 30% ;
-    box-shadow : var(--darkest-color) 4em 2em 1em 0px;
+    box-shadow : var(--shadow-color) 4em 2em 1em 0px;
     transition : opacity 0.4s ease-in-out ;
 }
 
@@ -308,7 +308,7 @@ button {
     margin-left : auto ;
     margin-right : auto ;
     transition: 0.3s;
-    background: linear-gradient(var(--main-color),var(--darkest-color));
+    background: linear-gradient(var(--ter-background-color),var(--contrast-color));
     margin-bottom : 3em
   }
 
@@ -515,6 +515,9 @@ button {
     color : var(--police-color)
 }
 
+.div5 {
+    color : var(--police-color-light)
+}
 .div5 h1 {
     font-size: 5em;
     text-align: center;
