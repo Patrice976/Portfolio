@@ -1,21 +1,12 @@
 :root {
-    --main-color: #8C4303; /* milieu */
-    --lightest-color: #f2bf5e; /* full gauche */
+    --main-color: #ad5b13; 
+    --lightest-color: #f2bf5e; 
     --secondary-light-color: #F0A447;
-    --secondary-dark-color: #40261D;
+    --secondary-dark-color: #150c09;
     --darkest-color: #0D0D0D;
-    --police-color : black ; 
+    --police-color : black ;
+    --police-color-light : #fcd587
     
    
 }
-
-/* .blue_theme {
-    --main-color:#324873;
-    --lightest-color: #9973BF;
-    --secondary-light-color:#1E2640;
-    --secondary-dark-color:#111826;
-    --darkest-color: #0D0D0D;
-    --police-color : white
-   
-} */
 

@@ -45,10 +45,10 @@ imgMe.addEventListener('mouseover', ()=>{
 
 
         },300)
-        document.documentElement.style.setProperty('--main-color', '#8C4303');
+        document.documentElement.style.setProperty('--main-color', '#ad5b13');
         document.documentElement.style.setProperty('--lightest-color', '#f2bf5e');
-        document.documentElement.style.setProperty('--secondary-light-color', '#D97F11');
-        document.documentElement.style.setProperty('--secondary-dark-color', '#40261D');
+        document.documentElement.style.setProperty('--secondary-light-color', '#F0A447');
+        document.documentElement.style.setProperty('--secondary-dark-color', '#150c09');
         document.documentElement.style.setProperty('--darkest-color', '#0D0D0D');
 
         red = false
