@@ -29,26 +29,34 @@ imgMe.addEventListener('mouseover', ()=>{
             document.documentElement.style.setProperty('--secondary-light-color', '#8C1E14');
             document.documentElement.style.setProperty('--secondary-dark-color', '#261515');
             document.documentElement.style.setProperty('--darkest-color', '#BF2626');
-            document.documentElement.style.setProperty('--police-color', '#F2ECE4');
+            document.documentElement.style.setProperty('--police-color','#ffff');
+
 
 
         red = true
     }
     else {
         imgMe.style.opacity = 0 ;
+        imgMe.style.height = '';
+        imgMe.style.marginLeft = ""
         setTimeout(()=> {
             imgMe.src = "asset/img/slefy.jpeg"
             imgMe.alt = "illustration jeune métisse sur fond jaune , cheuveux bouclé, lunette de soleil aux verres orangées , boucle d'oreils, tatouage sur le cou et sweat jaune "
             imgMe.style.opacity = 1 ;
             imgMe.style.height = '65%';
-            imgMe.style.marginLeft = "15%"
+            imgMe.style.marginLeft = "5em";
+            imgMe.style.marginRight = "2.5em";
+            imgMe.style.marginTop = "5em"
+                 
+           
+
 
 
         },300)
         document.documentElement.style.setProperty('--main-color', '#ad5b13');
-        document.documentElement.style.setProperty('--lightest-color', '#f2bf5e');
-        document.documentElement.style.setProperty('--secondary-light-color', '#F0A447');
-        document.documentElement.style.setProperty('--secondary-dark-color', '#150c09');
+        document.documentElement.style.setProperty('--lightest-color', '#fadda7');
+        document.documentElement.style.setProperty('--secondary-light-color', '#DC7E26');
+        document.documentElement.style.setProperty('--secondary-dark-color', '#421E00');
         document.documentElement.style.setProperty('--darkest-color', '#0D0D0D');
 
         red = false

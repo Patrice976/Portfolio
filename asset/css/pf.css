@@ -13,7 +13,7 @@ body {
      
 }
 .txt {
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: "Zain", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -136,11 +136,12 @@ h2 {
 #me {
     height: 65%;
     width: auto;
-    margin-top : 4em ;
-    margin : 4em ;
+    margin-top : 5em ;
+    margin-right : 2.5em ;
+    margin-left : 5em ; 
     border-radius: 30% ;
     box-shadow : var(--darkest-color) 4em 2em 1em 0px;
-    transition : opacity 0.4s ease-in-out ;
+    transition : opacity 0.4s ease-in-out ; margin-
 }
 
 .div2 {
@@ -166,9 +167,9 @@ h2 {
     align-items : center ;
     justify-content: center;
     text-align: center;
-    margin : 2em ;
+    margin : 3em ;
     flex-wrap: nowrap;
-    width: 25vh;
+    width: 20dvh;
 
 
 
@@ -176,12 +177,11 @@ h2 {
 
 
 .passions img{
-    height: 250px ;
-    width: 250px ;
+    height: 200px ;
+    width: 200px ;
     border-radius: 50%;
     object-fit:cover;
-    transition: opacity 0.6s ease transform  0.6s ;
-    padding : 1em
+    padding : 2em
 
 
 
@@ -189,18 +189,17 @@ h2 {
 
 .txt_under_img {
     text-align: center;
-    /* white-space : nowrap ; */
     width: 25dvw
 }
 
 .ltxt {
-    font-size: 1.3em ;
+    font-size: 1em ;
     font-family: 'Zain';
     color : var(--secondary)
 }
 
 .txt_above_img h2 {
-    font-size: 2.3em;
+    font-size: 2 em;
     text-align: center;
     bottom : 100% ;
     margin-left : 40% ;
@@ -267,7 +266,7 @@ h2 {
     font-weight: 300;
     font-style: normal;
     color : var(--police-color) ;
-    /* background-color: rgb(222, 61, 195); */
+    
 }
 
 .stack_txt h2 {
@@ -515,14 +514,17 @@ button {
     color : var(--police-color)
 }
 
+.div5 {
+    color: var(--police-color)
+}
 .div5 h1 {
-    font-size: 5em;
+    font-size: 4em;
     text-align: center;
 }
 
 .div5 p {
     text-align: center;
-    font-size : 3em;
+    font-size : 2em;
     padding: 5%;
 }
 
