@@ -2,17 +2,10 @@
     margin : 0;
     padding : 0 ;
 }
-html {
-    scroll-padding-top: 20dvh;
-  }
+
 a { 
     color: inherit;
     text-decoration: none;
-    cursor: pointer;
-}
-
-a:hover {
-    text-decoration: underline !important;
 }
 
 body {
@@ -42,9 +35,9 @@ section {
     padding: 1.4em ;
     position : fixed ;
     width : 100% ;
-    background : linear-gradient(var(--ter-background-color),var(--contrast-color)) ;
+    background : linear-gradient(var(--main-color),var(--darkest-color)) ;
     height : 2.4em;
-    box-shadow: 5px 0px 9px 14px var(--ter-background-color);
+    box-shadow: 5px 0px 9px 14px var(--main-color);
     
 }
 
@@ -89,8 +82,8 @@ section {
 }
 
 .yellowTheme {
-    background: linear-gradient(var(--main-background-color) 25%,var(--sub-background-color) 60%,var(--ter-background-color));
-    color:var(--contrast-color);
+    background: linear-gradient(var(--lightest-color) 25%,var(--secondary-light-color) 60%,var(--main-color));
+    color:var(--secondary-dark-color);
 
 }
 
@@ -121,14 +114,12 @@ h1 {
 
 h2 {
     font-family: "foxlight";
-    text-align: center;
     font-weight: normal;
-    font-size : 3em ;
 
 }
 
 
-/* .div1 h2 {
+.div1 h2 {
     margin-left : 10em ;
     margin-bottom : 2em ;
     font-size : 2em ;
@@ -140,7 +131,7 @@ h2 {
     text-align: center;
     margin-bottom: 0.5em;
     font-size: 3em;
-} */
+}
 
 #me {
     height: 65%;
@@ -150,7 +141,7 @@ h2 {
     margin-left : 5em ; 
     border-radius: 30% ;
     box-shadow : var(--darkest-color) 4em 2em 1em 0px;
-    transition : opacity 0.4s ease-in-out ; margin-
+    transition : opacity 0.4s ease-in-out;
 }
 
 .div2 {
@@ -220,6 +211,12 @@ h2 {
     display : flex ;
     flex-direction: column;
     align-items: center;
+}
+
+.div3 h2 {
+    text-align: center;
+    margin: 2em;
+    font-size: 3em;
 }
 
 .display_button {
@@ -316,7 +313,7 @@ button {
     margin-left : auto ;
     margin-right : auto ;
     transition: 0.3s;
-    background: linear-gradient(var(--ter-background-color),var(--contrast-color));
+    background: linear-gradient(var(--main-color),var(--darkest-color));
     margin-bottom : 3em
   }
 
