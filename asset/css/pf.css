@@ -88,6 +88,8 @@ section {
     margin-left: 8dvw;    
 }
 
+
+
 .txt_container {
     overflow: visible;
     margin-left : 1em;
@@ -127,14 +129,15 @@ h2 {
 }
 
 #me {
-    height: 65%;
-    width: auto;
+    max-width: 30dvw;
+    height: auto;
     margin-top : 5em ;
     margin-right : 2.5em ;
     margin-left : 5em ; 
     border-radius: 30% ;
     box-shadow : var(--darkest-color) 4em 2em 1em 0px;
     transition : opacity 0.4s ease-in-out;
+
 }
 
 .div2 {
@@ -560,6 +563,7 @@ button {
     .headery {
         display: none; 
     }
+    
 }
 
 @media (max-width : 1300px) {
@@ -567,6 +571,25 @@ button {
         flex-direction: column-reverse;
         align-items: center;
         text-align: center;
+    }
+    h1 {
+        font-size: 8rem;
+    }
+    .txt_container {
+        width : 90dvw
+    }
+    .txt_container h2 {
+        margin: 0;
+    }
+    #me {
+        height: 5%;
+        width: auto;
+        margin-top : 1em ;
+        margin-right : 0.5em ;
+        margin-left : 1em ; 
+        border-radius: 30% ;
+        box-shadow : var(--darkest-color) 2.5em 0.5em 0.25em 0px;
+        transition : opacity 0.4s ease-in-out;
     }
 
 
