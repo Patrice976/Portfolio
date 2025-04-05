@@ -6,14 +6,20 @@
 a { 
     color: inherit;
     text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+a:hover {
+    transform: scale(1.2);
 }
 
 body {
-     overflow-x : hidden
+     overflow-x : hidden;
      
 }
 .txt {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-family: "Zain", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -23,33 +29,22 @@ body {
 
 
 section {
-    height: 100vh ;
+    min-height: 100vh ;
     width: 100%;
 }
 
 .headery {
-    z-index: 20;
+
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    border-bottom: 2px solid var(--secondary-dark-color);
     padding: 1.4em ;
-    position : fixed ;
-    width : 100% ;
-    background : linear-gradient(var(--main-color),var(--darkest-color)) ;
-    height : 2.4em;
-    box-shadow: 5px 0px 9px 14px var(--main-color);
+    width : 70dvw ;
+    height : 2em;
+    margin-left: 30%;
     
-}
-
-.linkResaux {
-    width : auto;
-    display : flex;
-    justify-content: flex-end;
-}
-
-.linkResaux a {
-    margin : 0;
-    padding : 0;
+    
 }
 
 
@@ -57,7 +52,7 @@ section {
 
 .headery a {
     margin : 0 2em ;
-    color: var(--police-color-light);
+    color: var(--secondary-dark-color);
     font-family: "Zain", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -66,9 +61,9 @@ section {
     text-decoration: none;
 }
 
-.nav {
+/* .nav {
     margin-right: 20%;
-}
+} */
 
 .logoResaux {
     margin : 0 0.5em;
@@ -90,7 +85,7 @@ section {
 .landing_container{
     display:flex ;
     overflow-x: hidden ;
-    margin-left: 2%;    
+    margin-left: 8dvw;    
 }
 
 .txt_container {
@@ -101,9 +96,7 @@ section {
     font-optical-sizing: auto;
 }
 
-.img_container{
-    margin-top : 4em ;
-}
+
 
 h1 {
     font-size: 15em;
@@ -121,7 +114,6 @@ h2 {
 
 .div1 h2 {
     margin-left : 10em ;
-    margin-bottom : 2em ;
     font-size : 2em ;
     overflow : visible ;
     white-space: nowrap;
@@ -130,6 +122,7 @@ h2 {
 .div2 h2 {
     text-align: center;
     margin-bottom: 0.5em;
+    margin-top : 2em;
     font-size: 3em;
 }
 
@@ -148,7 +141,7 @@ h2 {
     padding-bottom: 50dvh;
 }
 .contenu_a_propos {
-    margin-top : 10em ;
+    margin-top : 1em ;
     line-height: 4em;
     margin-left: 2em;
     margin-right: 1em;
@@ -157,18 +150,15 @@ h2 {
     display: flex;
     justify-content: space-around;
     align-items: center ;
-    flex-wrap: nowrap;
-    margin : 30px
+    margin : 10px
 
 }
 .passions {
     display : flex ;
     flex-direction: column;
     align-items : center ;
-    justify-content: center;
     text-align: center;
     margin : 3em ;
-    flex-wrap: nowrap;
     width: 20dvh;
 
 
@@ -181,7 +171,7 @@ h2 {
     width: 200px ;
     border-radius: 50%;
     object-fit:cover;
-    padding : 2em
+    
 
 
 
@@ -562,4 +552,22 @@ button {
 
 .hide {
     display: none
+}
+
+/* Media Query */
+
+@media (max-width: 910px) {
+    .headery {
+        display: none; 
+    }
+}
+
+@media (max-width : 1300px) {
+    .landing_container {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+
 }
