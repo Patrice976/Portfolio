@@ -240,6 +240,28 @@ function showButton(button) {
     }
 }
 
+//logique d'affichage en cascade des éléments avec fondue (géré en css)
+
+const reveals = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+    else {
+        entry.target.classList.remove('visible')
+    }
+  });
+}, {
+  threshold: 0.4 // l’élément doit être au moins à 10% visible
+});
+
+reveals.forEach(reveal => {
+  observer.observe(reveal);
+});
+
+
 
 
 
