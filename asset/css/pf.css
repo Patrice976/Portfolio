@@ -191,6 +191,7 @@ h2 {
     border-radius: 50%;
     object-fit:cover;
     align-self: flex-start;
+    transition: width 0.5s ease, height 0.5s ease; 
 
 
 }
@@ -582,11 +583,23 @@ button {
     .activities {
         grid-template-columns: 1fr; /* 1 seule colonne */
       }
-    
+    /* .img_container {
+        display: none;
+    } */
+    .div1{
+        display: flex ; 
+        justify-content: center;
+        align-items: center;
+    }
       .passions {
         flex-direction: column; /* on garde la colonne pour l’image + texte */
         align-items: center;
         text-align: center;
+      }
+
+      .passions img {
+        height: 120px;
+        width: 120px;
       }
     
       .txt_under_img {
@@ -615,6 +628,8 @@ button {
     #me {
         height: 5%;
         width: auto;
+        max-width: 196px;
+        max-height: 196px;
         margin-top : 1em ;
         margin-right : 0.5em ;
         margin-left : 1em ; 
