@@ -96,9 +96,11 @@ section {
 }
 
 .landing_container{
-    display:flex ;
-    overflow-x: hidden ;
-    margin-left: 8dvw;    
+    display: flex;
+    justify-content: space-between; /* ou space-evenly / space-around selon ton besoin */
+    align-items: center;
+    padding: 0 8vw; /* Égal à gauche et à droite */
+    gap: 1.5rem; /* espace entre les deux blocs */
 }
 
 
@@ -141,10 +143,10 @@ h2 {
 }
 
 #me {
-    max-width: 30dvw;
+    max-width: 80%;
     height: auto;
     margin-top : 5em ;
-    margin-right : 4em ;
+    margin-right : 6em ;
     margin-left : 5em ; 
     border-radius: 30% ;
     box-shadow : var(--darkest-color) 2.75em 1.5em 1em 0px;
@@ -152,9 +154,7 @@ h2 {
 
 }
 
-.div2 {
-    padding-bottom: 50dvh;
-}
+
 .contenu_a_propos {
     margin-top : 1em ;
     line-height: 4em;
@@ -173,9 +173,10 @@ h2 {
 }
 
 .passions {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+  flex-wrap: wrap; /* ← autorise les éléments à aller à la ligne */
   align-items: flex-start;
+  justify-content: center; /* ou space-between */
   gap: 2rem;
   width: 100%;
   max-width: 600px;
@@ -199,7 +200,8 @@ h2 {
 .txt_under_img {
     flex:1;
     text-align: justify;
-    width: 25dvw
+    width: 100%;
+    max-width: 25rem;
 }
 
 .ltxt {
@@ -274,8 +276,7 @@ h2 {
 
 .stack_txt{
     padding : 2em ;
-    /* margin-left: 120% ; */
-    width : 100dvh ;
+    width : 100% ;
     text-align: center ;
     font-size: 1.5em;
     font-family: "Zain", sans-serif;
@@ -357,7 +358,8 @@ button {
 
 .div4{
     margin-top : 20%;
-    height : 180dvh;
+    min-height: 100vh; 
+    padding-bottom: 5em;
 }
 .div4 h2 {
     text-align: center;
@@ -383,7 +385,7 @@ button {
     justify-items: center;
     align-items: center;
     border: solid var(--main-color);
-    width: 80dvh;
+    width: 80%;
     height: 38dvh;
     margin : auto ; 
     justify-content: center;
@@ -466,8 +468,8 @@ button {
 }
 .projet_stack img {
 
-    height: 60%;
-    width : 60%;
+    height: 35%;
+    width : 35%;
 
 }
 .work_in_progress {
@@ -509,7 +511,7 @@ button {
     justify-content: center ;
     align-items: center;
     gap: 50px;
-    width: 300%;
+    width: 100%;
     height : 100%;
     z-index: 100;
     margin-left: 20%;
@@ -656,6 +658,11 @@ button {
         text-align: left;
         justify-content: flex-start;
     }
+   .allprojectlist {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem
+   }
 
 
 }

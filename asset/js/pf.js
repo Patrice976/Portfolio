@@ -17,8 +17,8 @@ imgMe.addEventListener('mouseover', ()=>{
                 imgMe.src = 'asset/img/selfr.jpeg' ;
                 imgMe.alt = "Jeune métisse allongé dans des feuille d'automne, thème rouge. Sweat rouge avec capuche blanche, un pulle marron/noir et un collier"
                 imgMe.style.opacity = 1 ;
-                imgMe.style.height = '55%';
-                imgMe.style.marginLeft = "20%"
+                
+                
 
 
 
@@ -43,11 +43,7 @@ imgMe.addEventListener('mouseover', ()=>{
             imgMe.src = "asset/img/slefy.jpeg"
             imgMe.alt = "illustration jeune métisse sur fond jaune , cheuveux bouclé, lunette de soleil aux verres orangées , boucle d'oreils, tatouage sur le cou et sweat jaune "
             imgMe.style.opacity = 1 ;
-            imgMe.style.height = '65%';
-            imgMe.style.marginLeft = "5em";
-            imgMe.style.marginRight = "2.5em";
-            imgMe.style.marginTop = "5em"
-                 
+           
            
 
 
