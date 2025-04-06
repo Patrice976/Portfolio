@@ -158,7 +158,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.4 // l’élément doit être au moins à 10% visible
+  threshold: 0.01 // l’élément doit être au moins à 10% visible
 });
 
 reveals.forEach(reveal => {

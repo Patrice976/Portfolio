@@ -380,7 +380,7 @@ h2 {
     width: 100%;
     height : 100%;
     z-index: -1;
-    background-color: aqua;
+    background-color: var(--secondary-dark-color);
     opacity: 1;
 }
 
@@ -391,33 +391,45 @@ h2 {
 
 #Mythe_au_logis .bg_projet  {
     background-image: url(../../asset/img/mythe_au_logis.png);
-    background-size: cover ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
 #superhero_api .bg_projet {
     background-image: url(../../asset/img/SuperHeroAPI.PNG);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #mokey_adventure .bg_projet {
     background-image: url(../../asset/img/MonkeyAdventure.PNG);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #portfolio .bg_projet {
     background-image: url(../../asset/img/portefolio.PNG);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #Dicosaurus .bg_projet {
     background-image: url(../../asset/img/dino_neutral3.PNG);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 #cozyNetwork .bg_projet {
     background-image: url(../../asset/img/cozynetwork\ preview.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .project_name {
@@ -594,6 +606,13 @@ h2 {
       .competence_block {
         width: 100%;
         max-width: none;
+      }
+      .projet_stack {
+        animation: none;
+      }
+      .projet_stack img {
+        height: 60px;
+        width: 60px;
       }
 
     
