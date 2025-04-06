@@ -17,7 +17,7 @@ imgMe.addEventListener('mouseover', ()=>{
                 imgMe.src = 'asset/img/selfr.jpeg' ;
                 imgMe.alt = "Jeune métisse allongé dans des feuille d'automne, thème rouge. Sweat rouge avec capuche blanche, un pulle marron/noir et un collier"
                 imgMe.style.opacity = 1 ;
-                
+
                 
 
 
@@ -59,110 +59,18 @@ imgMe.addEventListener('mouseover', ()=>{
     }})
 
 
-//troisième section : Quand on appuie sur un des boutons, le contenu de ce dernier s'afficher
-
-
-let buttonMaStack = document.getElementById('stack')
-let displayStack = document.querySelector('.ma_stack')
-let buttonOutils = document.getElementById('outils')
-let displayOutils = document.querySelector('.mes_outils')
-let buttonSkills = document.getElementById('skills')
-let displaySkills = document.querySelector('.mes_skills')
-let buttonCV = document.getElementById('CV')
-let displayCV = document.querySelector('.CV')
-let clickMe = {transform : ["translateX(-10px)","translateX(10px)","translateX(-10px)","translateX(10px)","translateX(0px)"]}
-
-let logoStack = document.querySelector(".ma_stack .stack_img")
-let logoOutils = document.querySelector(".mes_outils .stack_img")
-let logoSkills = document.querySelector(".mes_skills .stack_img")
-
-console.log(buttonCV)
-function playanimation(cible,animation,temps) {
-    cible.animate(animation,temps)
-}
-
-buttonMaStack.addEventListener ('click', ()=>{
-    console.log('stackCLIC')
-    displayStack.classList.remove('hide')
-    displayOutils.classList.add('hide')
-    displaySkills.classList.add('hide')
-    displayStack.scrollIntoView({behavior: "smooth", block: "center"})
-    playanimation(logoStack,clickMe,600)
-}
-)
-
-buttonOutils.addEventListener ('click', ()=>{
-    console.log('outilCLIC')
-    displayStack.classList.add('hide')
-    displayOutils.classList.remove('hide')
-    displaySkills.classList.add('hide')
-    displayOutils.scrollIntoView({behavior: "smooth", block: "center"})
-    playanimation(logoOutils,clickMe,600)
-
-}
-)
-
-buttonSkills.addEventListener ('click', ()=>{
-    console.log('skillsCLIC')
-    displayStack.classList.add('hide')
-    displayOutils.classList.add('hide')
-    displaySkills.classList.remove('hide')
-    displaySkills.scrollIntoView({behavior: "smooth", block: "center"})
-    playanimation(logoSkills,clickMe,600)
-
-}
-)
-
-
-
 // troisième section : au clique sur l'image affiche le texte qui lui correspond
 
-
-imgSec3= document.querySelector('.stack_img img')
-
-console.log(document)
-const ImgToText = {
-    //Partie Stack
-    'img_js' : 'txt_js',
-    'img_python' : 'txt_python',
-    'img_php' : 'txt_php',
-    'img_vue' : 'txt_vue',
-    //Partie Outils
-    'figma_logo' : 'txt_figma',
-    'github_logo' : 'txt_github',
-    'git_logo' : 'txt_git',
-    'notion_logo' : 'txt_notion',
-    'slack_logo' : 'txt_slack',
-    'vscode_logo' : 'txt_vscode',
-    //Parti SoftSkillz
-    'teamwork_logo' : 'txt_teamwork',
-    'creativity_logo' : 'txt_creativity',
-    'sociability_logo' : 'txt_sociability',
-    'empathy_logo' : 'txt_empathy'
-
-}
-let stack_txt = document.querySelectorAll(".stack_txt span")
-let stack_img = document.querySelectorAll(".stack_img img")
-
-
-for (let index = 0; index < stack_img.length; index++) { //On parcours l'enssemble des image clicable
-    const interactible_img = stack_img[index];
-    interactible_img.addEventListener ('click',function() { //On attache au image clicable un event listener
-        for (let i = 0; i < stack_txt.length; i++) { // Boucle pour cacher tout les éléments texte lié aux images
-            const txtForImg = stack_txt[i];
-            txtForImg.classList.add('hide')
-        }
-        let imgID= this.getAttribute('id') //récupération de l'ID lié à l'image cliqué
-        let txt = ImgToText[imgID] // récupéré l'id du txt correspondant à l'img
-
-        let TargetTxt = document.getElementById(txt) // on selectionne l'élément grace à l'id récupérer dans l'objet ImgToText
-        console.log(imgID)
-        TargetTxt.classList.remove('hide')  // aficher le texte
-        TargetTxt.scrollIntoView({behavior: "smooth", block :"nearest"}) //Faire en sorte que la fin du texte soit visible sur l'écrant utilisateur
-
-
-
-    })}
+// Ajoute/retire la classe "tooltip-open" sur le bon élément
+document.querySelectorAll('.competence_block').forEach(block => {
+    block.addEventListener('click', (e) => {
+      // Évite que le clic sur l’image ou l’intérieur de la stack_item déclenche deux fois
+      if (!e.target.closest('.tooltip')) {
+        block.classList.toggle('tooltip-open');
+      }
+    });
+  });
+  
 
 
 
@@ -265,6 +173,7 @@ reveals.forEach(reveal => {
 hideButton(idProjets)
 showButton(idProjets)
 
+console.log(document.querySelectorAll('.reveal'))
 
 
 

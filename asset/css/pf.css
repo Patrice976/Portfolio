@@ -219,6 +219,8 @@ h2 {
 
 }
 
+/* section 3 */
+
 .div3 {
     display : flex ;
     flex-direction: column;
@@ -231,135 +233,109 @@ h2 {
     font-size: 3em;
 }
 
-.display_button {
-    max-width: 100%;
-}
-
-.ma_stack, .mes_outils, .mes_skills, .CV {
-    display : flex ;
-    position: relative ;
-    flex-direction : column ;
-    align-items: center;
-    margin-top : 5% ;
-    text-align: center ;
-     /* background-color: gold;  */
-}
-
-.stack_img {
-    display : flex ;
-   justify-content: space-evenly;
-   /* background-color: aqua; */
-   width: 100%;
-
-}
-
-#pourlinstant {
-
-    display : flex ;
-   justify-content: space-evenly;
-   width: 100%;
-
-}
-
-#pourlinstant  img {
-    height: 200px ;
-    max-width: 200px ;
-    padding : 1em ;
-    /* background-color: chartreuse; */
-
-}
-
-/* text commentaire stack */
-#txt_js {
- z-index: 200;
-}
-
-.stack_txt{
-    padding : 2em ;
-    width : 100% ;
-    text-align: center ;
-    font-size: 1.5em;
-    font-family: "Zain", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    color : var(--police-color) ;
-    
-}
-
-.stack_txt h2 {
-    color : var(--police-color)
-}
-
-.div3 .stack_img img {
-    height: 150px ;
-    max-width: 150px ;
-    padding : 1em ;
-    /* background-color: chartreuse; */
-
-}
-
-.button_list {
+.competences_container {
     display: flex;
-    margin-top: 15%;
-    width: 90dvw ;
-    /* background-color: magenta; */
-}
-
-
-
-button {
-    font-family: "Aloja-Light";
-}
-
-.button_list button {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 4vw;
+    padding: 0 5vw;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Chaque bloc (front ou back) */
+  .competence_block {
+    flex: 1 1 45%;
+    max-width: 500px;
+    min-width: 300px;
+    padding: 1em;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: var(--police-color-light);
-    font-size: 22px;
-    border-radius: 20px;
-    width: 15em;
-    height: 4em;
-    margin-left : auto ;
-    margin-right : auto ;
-    transition: 0.3s;
-    background: linear-gradient(var(--main-color),var(--darkest-color));
-    margin-bottom : 3em
+    box-sizing: border-box;
   }
-
-  .button_list button:hover {
-    cursor:pointer;
-    border-bottom-width: 0;
-    animation : 1.3s ease-in-out  infinite alternate pickme
-
+  
+  .competence_block h3 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    font-family: 'Zain', sans-serif;
+    text-align: center;
+    color: var(--police-color);
   }
-
-  @keyframes pickme {
-    from { transform : translateY(-10px)}
-    to {transform : translateY(10px)}
+  
+  .stack_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    justify-items: center;
+    align-items: center;
   }
+  
+  .stack_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .stack_item:hover {
+    transform: scale(1.05);
+  }
+  
+  .stack_item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 0.5em;
+    transition: transform 0.3s ease;
+  }
+  
+  .stack_name {
+    font-family: 'Zain', sans-serif;
+    font-size: 1em;
+    color: var(--police-color);
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  
+  /* Détail complémentaire : au départ caché */
+  .competence_block .tooltip {
+    margin-top: 2em;
+    padding: 1em;
+    font-size: 1em;
+    font-family: 'Zain', sans-serif;
+    color: var(--police-color);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    cursor: pointer;
+  }
+  
+  /* On affiche partiellement au hover */
+  .competence_block:hover .tooltip {
+    max-height: 150px;
+    opacity: 0.6;
+  }
+  
+  /* On affiche totalement au clic (classe JS à ajouter) */
+  .competence_block.tooltip-open .tooltip {
+    opacity: 1 !important;
+    max-height: 500px !important;
+  }
+  
 
-.stack_img img:hover {
-    cursor:pointer;
-    animation : 0.5s ease-in-out infinite alternate itsme ;
-    
-}
-
-
-
-@keyframes itsme {
-    from { transform: scale(1.1);}
-    to {transform: scale(1.5);}
-
-}
 
 /* section 4 */
 
 .div4{
-    margin-top : 20%;
-    min-height: 100vh; 
-    padding-bottom: 5em;
+  padding-bottom: 5em; 
+  height: auto;        
+  overflow: visible;  
+
 }
 .div4 h2 {
     text-align: center;
@@ -372,7 +348,7 @@ button {
     display: grid ; 
     justify-items: center;
     grid-template-columns: 1fr 1fr;
-    row-gap: 15%;
+    row-gap: 10rem;
     width : 100%;
     margin : auto;
 
@@ -445,7 +421,6 @@ button {
 }
 
 .project_name {
-   position: relative; 
    display : flex;
    align-items: baseline;
    transition : opacity 3s 
@@ -533,7 +508,8 @@ button {
 }
 
 .div5 {
-    color: var(--police-color)
+    color: var(--police-color);
+    margin-top: 5rem; 
 }
 .div5 h1 {
     font-size: 4em;
@@ -607,6 +583,17 @@ button {
       .txt_under_img {
         margin-top: 1em;
         width: 100%; /* on laisse le texte respirer */
+      }
+
+      .competences_container {
+        flex-direction: column;
+        gap: 3em;
+        padding: 0 2em;
+      }
+    
+      .competence_block {
+        width: 100%;
+        max-width: none;
       }
 
     
