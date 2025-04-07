@@ -58,10 +58,29 @@ imgMe.addEventListener('mouseover', ()=>{
         red = false
     }})
 
+// deuxème section : logique d'affichage en cascade des éléments avec fondue (géré en css)
 
-// troisième section : au clique sur l'image affiche le texte qui lui correspond
+const reveals = document.querySelectorAll('.reveal');
 
-// Ajoute/retire la classe "tooltip-open" sur le bon élément
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+    else {
+        entry.target.classList.remove('visible')
+    }
+  });
+}, {
+  threshold: 0.01 // l’élément doit être au moins à 10% visible
+});
+
+reveals.forEach(reveal => {
+  observer.observe(reveal);
+});
+
+// troisième section : Ajoute/retire la classe "tooltip-open" sur le bon élément
+
 document.querySelectorAll('.competence_block').forEach(block => {
     block.addEventListener('click', (e) => {
       // Évite que le clic sur l’image ou l’intérieur de la stack_item déclenche deux fois
@@ -76,7 +95,7 @@ document.querySelectorAll('.competence_block').forEach(block => {
 
 //section 4 : Faire apparaitre du contenu au clic
 
-idProjets = ['Mythe_au_logis','superhero_api','mokey_adventure','portfolio','Dicosaurus','cozyNetwork']
+idProjets = ['Mythe_au_logis','superhero_api','mokey_adventure','portfolio','Dicosaurus','cozyNetwork','Vente2Meuble','MainMaker']
 
 let forge = [ //banque image pour l'animaion 
     'asset/img/animation marteau/Forge.png',
@@ -144,26 +163,6 @@ function showButton(button) {
     }
 }
 
-//logique d'affichage en cascade des éléments avec fondue (géré en css)
-
-const reveals = document.querySelectorAll('.reveal');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-    else {
-        entry.target.classList.remove('visible')
-    }
-  });
-}, {
-  threshold: 0.01 // l’élément doit être au moins à 10% visible
-});
-
-reveals.forEach(reveal => {
-  observer.observe(reveal);
-});
 
 
 
@@ -173,7 +172,7 @@ reveals.forEach(reveal => {
 hideButton(idProjets)
 showButton(idProjets)
 
-console.log(document.querySelectorAll('.reveal'))
+
 
 
 

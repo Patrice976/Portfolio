@@ -432,6 +432,20 @@ h2 {
     background-position: center;
 }
 
+#Vente2Meuble .bg_projet {
+    background-image: url(../../asset/img/Vente2Meuble.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#MainMaker .bg_projet {
+    background-image: url(../../asset/img/mainMaker.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .project_name {
    display : flex;
    align-items: baseline;
@@ -449,14 +463,15 @@ h2 {
     z-index : 1;
     display: flex;
     flex-direction: column;
+    gap: 1em;
     animation : 1.75s ease-in-out  forwards showstacks, 2s ease-in-out  forwards apparition;
     width: 100%; 
       
 }
 .projet_stack img {
 
-    height: 35%;
-    width : 35%;
+    height: 30%;
+    width : 30%;
 
 }
 .work_in_progress {
