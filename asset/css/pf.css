@@ -22,6 +22,7 @@ a:hover {
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    
 }
 
 
@@ -70,7 +71,6 @@ section {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 1s ease-out, transform 1s ease-out;
-    will-change: opacity, transform;
   }
   
   .reveal.visible {
@@ -312,7 +312,6 @@ h2 {
     max-height: 0;
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease;
-    cursor: pointer;
   }
   
   /* On affiche partiellement au hover */
@@ -361,11 +360,14 @@ h2 {
     justify-items: center;
     align-items: center;
     border: solid var(--main-color);
-    width: 80%;
-    height: 38dvh;
+    width: 60%;
+    height: auto;
     margin : auto ; 
     justify-content: center;
     box-sizing: border-box;
+    min-height: 38dvh;
+    
+
 }
 
 .projet_presentation {
@@ -470,8 +472,8 @@ h2 {
 }
 .projet_stack img {
 
-    height: 30%;
-    width : 30%;
+    height: 50%;
+    width : 50%;
 
 }
 .work_in_progress {
@@ -530,9 +532,41 @@ h2 {
 
 }
 
+.projet_presentation button {
+    color: var(--secondary-dark-color);
+    border: 2px solid var(--police-color);
+    border-radius: 8px;
+    padding: 0.6em 1.5em;
+    font-size: 1em;
+    font-family: 'Zain', sans-serif;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    background: linear-gradient(-45deg, var(--lightest-color), var(--secondary-light-color),var(--main-color));
+    background-size: 400% 400%;
+    animation: none;
+    transition: all 0.5s ease;
+      }
+      
+    .projet_presentation button:hover {
+    animation: gradientFlow 3s ease infinite;
+    transform: scale(1.05);
+    color: white;
+      }
+      
+    @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+      }
+
 .work_in_progress .txt {
     color : var(--police-color)
 }
+
+z
 
 .div5 {
     color: var(--police-color);
@@ -596,6 +630,24 @@ h2 {
         justify-content: center;
         align-items: center;
     }
+    .div1 h1 {
+        font-size: 4em;
+    }
+    .div1 h2 {
+        font-size : 1.5em
+    }
+    .contenu_a_propos{
+    margin-top : 0 ;
+    line-height: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+
+    }
+    .txt {
+        font-size: 1em;
+
+    }
+    
       .passions {
         flex-direction: column; /* on garde la colonne pour l’image + texte */
         align-items: center;
@@ -629,11 +681,16 @@ h2 {
         height: 60px;
         width: 60px;
       }
+      .projet_presentation button {
+        padding: 0.8em 2em;
+        margin-bottom :2em;
+        font-size: 0.9em;
+      }
 
     
 }
 
-@media (max-width : 1300px) {
+@media (max-width : 1090px) {
     .landing_container {
         flex-direction: column-reverse;
         align-items: center;
@@ -679,11 +736,44 @@ h2 {
         text-align: left;
         justify-content: flex-start;
     }
+    .work_in_progress {
+        display : none ;
+    }
    .allprojectlist {
     display: flex;
     flex-direction: column;
     gap: 10rem
    }
+   .projectlistcontainer{
+    overflow: hidden;
+   }
+   .projet_presentation {
+    padding: 0;
+    max-width: 30ch; /* limite à 30 caractères visibles par ligne */
+    margin: 0 auto;
+   }
+   .projet_presentation h2 {
+    padding : 1em
+   }
+   .project_name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    
+   }
+   .projet_stack {
+    flex-direction: row;
+    justify-content: center;
+    gap : 3em;
+    margin-bottom: 0.5em;
+   }
+   .projet_stack  img {
+    height: 15%;
+    width : 15%
+   }
+
 
 
 }

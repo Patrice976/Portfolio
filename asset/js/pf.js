@@ -72,7 +72,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.01 // l’élément doit être au moins à 10% visible
+  threshold: 0.2 
 });
 
 reveals.forEach(reveal => {
@@ -116,12 +116,10 @@ let forge = [ //banque image pour l'animaion
     'asset/img/animation marteau/Forge.png'
 ]
 
-function hideButton(Cible) { //cache toutes les div projets
-    for (let index = 0; index < Cible.length; index++) {
-        let projetdiv = document.querySelector('#'+Cible[index]+' .project_name') //selectionne la div enfant du projet sélectionné
-        let background = document.querySelector('#'+Cible[index]+' .bg_projet')
-        let forgeAnimation = document.querySelector('#'+Cible[index]+' .project_name .work_in_progress')
-        console.log('#'+Cible[index]+' .project_name .work_in_progress')
+function hideContent(div) { //cache toutes les div projets
+    for (let index = 0; index < div.length; index++) {
+        let projetdiv = document.querySelector('#'+div[index]+' .project_name') //selectionne la div enfant du projet sélectionné
+        let background = document.querySelector('#'+div[index]+' .bg_projet')
         projetdiv.style.display = "none" //désactive la div
         projetdiv.style.opacity = '0' //setup la transition sur l'opacité
         background.style.opacity ='1'
@@ -129,32 +127,30 @@ function hideButton(Cible) { //cache toutes les div projets
     }
 }
 
-function showButton(button) {
+function showContent(content) {
     let animation;
-    for (let index = 0; index < button.length; index++) {
-        let div = document.getElementById(button[index]);
-        let projetdiv = document.querySelector('#'+button[index]+' .project_name')
-        let background = document.querySelector('#'+button[index]+' .bg_projet')
-        let forgeAnimation = document.querySelector('#'+button[index]+' .project_name .work_in_progress img')
+    for (let index = 0; index < content.length; index++) {
+        let div = document.getElementById(content[index]);
+        let projetName = document.querySelector('#'+content[index]+' .project_name')
+        let background = document.querySelector('#'+content[index]+' .bg_projet')
+        let forgeAnimation = document.querySelector('#'+content[index]+' .project_name .work_in_progress img')
         
         div.addEventListener('mouseover', () => {
-            console.log('ok')
-            hideButton(button)
-            projetdiv.style.display = 'flex'
-            projetdiv.style.opacity = '1'
+            hideContent(content)
+            projetName.style.display = 'flex'
+            projetName.style.opacity = '1'
             background.style.opacity = '0.02'
             forgeAnimation.style.display = 'flex'
-            console.log(projetdiv.style.display)
+            console.log(projetName.style.display)
             let forgeindex =0
             animation = setInterval (() => { //animation forge en cours
             forgeAnimation.src = forge[forgeindex];
-            console.log(forgeAnimation)
             forgeindex = (forgeindex + 1) % forge.length;
         },60)
 
         })
         div.addEventListener('mouseout', () => {
-            hideButton(button)
+            hideContent(content)
             clearInterval(animation)
 
         })
@@ -169,8 +165,8 @@ function showButton(button) {
 
 
 
-hideButton(idProjets)
-showButton(idProjets)
+hideContent(idProjets)
+showContent(idProjets)
 
 
 
