@@ -749,7 +749,7 @@ z
    }
    .projet_presentation {
     padding: 0;
-    max-width: 30ch; /* limite à 30 caractères visibles par ligne */
+    max-width: 20ch; /* limite à 30 caractères visibles par ligne */
     margin: 0 auto;
    }
    .projet_presentation h2 {
