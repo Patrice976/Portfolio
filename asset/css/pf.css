@@ -533,8 +533,8 @@ h2 {
 }
 
 .projet_presentation button {
-    color: var(--secondary-dark-color);
-    border: 2px solid var(--police-color);
+    color: var(--police-color);
+    border: 2px solid var(--secondary-dark-color) ;
     border-radius: 8px;
     padding: 0.6em 1.5em;
     font-size: 1em;
@@ -620,11 +620,9 @@ z
         display: none; 
     }
     .activities {
-        grid-template-columns: 1fr; /* 1 seule colonne */
+        grid-template-columns: 1fr; 
       }
-    /* .img_container {
-        display: none;
-    } */
+
     .div1{
         display: flex ; 
         justify-content: center;
@@ -649,7 +647,7 @@ z
     }
     
       .passions {
-        flex-direction: column; /* on garde la colonne pour l’image + texte */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
       }
@@ -661,7 +659,7 @@ z
     
       .txt_under_img {
         margin-top: 1em;
-        width: 100%; /* on laisse le texte respirer */
+        width: 100%; 
       }
 
       .competences_container {
@@ -686,6 +684,19 @@ z
         margin-bottom :2em;
         font-size: 0.9em;
       }
+      .allprojectlist {
+        display: flex;
+        flex-direction: column;
+        gap: 10rem
+       }
+       .projet_presentation {
+    padding: 0;
+    max-width: 20ch; /* limite à 30 caractères visibles par ligne */
+    margin: 0 auto;
+   }
+   .projet_presentation h2 {
+    padding : 1em
+   }
 
     
 }
@@ -739,22 +750,11 @@ z
     .work_in_progress {
         display : none ;
     }
-   .allprojectlist {
-    display: flex;
-    flex-direction: column;
-    gap: 10rem
-   }
+   
    .projectlistcontainer{
     overflow: hidden;
    }
-   .projet_presentation {
-    padding: 0;
-    max-width: 20ch; /* limite à 30 caractères visibles par ligne */
-    margin: 0 auto;
-   }
-   .projet_presentation h2 {
-    padding : 1em
-   }
+   
    .project_name {
     display: flex;
     flex-direction: column;
